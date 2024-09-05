@@ -46,50 +46,50 @@
             // lblAgregarProducto
             // 
             lblAgregarProducto.AutoSize = true;
-            lblAgregarProducto.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAgregarProducto.Location = new Point(32, 41);
+            lblAgregarProducto.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAgregarProducto.Location = new Point(32, 42);
             lblAgregarProducto.Name = "lblAgregarProducto";
-            lblAgregarProducto.Size = new Size(145, 21);
+            lblAgregarProducto.Size = new Size(220, 32);
             lblAgregarProducto.TabIndex = 0;
             lblAgregarProducto.Text = "Agregar Producto";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(32, 99);
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(33, 99);
             label1.Name = "label1";
-            label1.Size = new Size(71, 21);
+            label1.Size = new Size(94, 30);
             label1.TabIndex = 1;
             label1.Text = "Nombre:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(32, 189);
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(33, 216);
             label2.Name = "label2";
-            label2.Size = new Size(80, 21);
+            label2.Size = new Size(107, 30);
             label2.TabIndex = 2;
             label2.Text = "Categoria:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(32, 240);
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(33, 268);
             label3.Name = "label3";
-            label3.Size = new Size(94, 21);
+            label3.Size = new Size(127, 30);
             label3.TabIndex = 3;
             label3.Text = "Stock Inicial:";
             // 
             // lblDescripcion
             // 
             lblDescripcion.AutoSize = true;
-            lblDescripcion.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDescripcion.Location = new Point(32, 141);
+            lblDescripcion.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDescripcion.Location = new Point(32, 158);
             lblDescripcion.Name = "lblDescripcion";
-            lblDescripcion.Size = new Size(94, 21);
+            lblDescripcion.Size = new Size(126, 30);
             lblDescripcion.TabIndex = 4;
             lblDescripcion.Text = "Descripcion:";
             // 
@@ -104,30 +104,30 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(132, 101);
+            textBox1.Location = new Point(165, 106);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(169, 23);
+            textBox1.Size = new Size(242, 23);
             textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(132, 143);
+            textBox2.Location = new Point(165, 165);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(169, 23);
+            textBox2.Size = new Size(242, 23);
             textBox2.TabIndex = 7;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(132, 191);
+            textBox3.Location = new Point(165, 223);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(169, 23);
+            textBox3.Size = new Size(242, 23);
             textBox3.TabIndex = 8;
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(132, 240);
+            textBox4.Location = new Point(165, 275);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(169, 23);
+            textBox4.Size = new Size(242, 23);
             textBox4.TabIndex = 9;
             // 
             // btnCancelar
@@ -142,6 +142,7 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(247, 251, 255);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(lblAgregarProducto);
@@ -153,7 +154,7 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(lblDescripcion);
             panel1.Controls.Add(btnAgregar);
-            panel1.Location = new Point(450, 0);
+            panel1.Location = new Point(420, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(500, 600);
             panel1.TabIndex = 11;
@@ -162,10 +163,10 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1180, 600);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Location = new Point(600, 0);
             Name = "AgregarProducto";
             StartPosition = FormStartPosition.Manual;
             Text = "AgregarProducto";

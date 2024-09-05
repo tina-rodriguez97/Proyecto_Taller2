@@ -155,8 +155,10 @@
             // btnRegistrar
             // 
             btnRegistrar.BackColor = Color.Transparent;
-            btnRegistrar.FlatAppearance.BorderColor = Color.Red;
+            btnRegistrar.FlatAppearance.BorderColor = Color.Teal;
+            btnRegistrar.FlatAppearance.BorderSize = 2;
             btnRegistrar.FlatAppearance.MouseDownBackColor = Color.Black;
+            btnRegistrar.FlatAppearance.MouseOverBackColor = Color.Azure;
             btnRegistrar.FlatStyle = FlatStyle.Flat;
             btnRegistrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRegistrar.Location = new Point(311, 504);
@@ -190,7 +192,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(245, 237, 237);
+            panel1.BackColor = Color.FromArgb(247, 251, 255);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(lblRol);
@@ -251,7 +253,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(255, 252, 247);
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(1180, 600);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;

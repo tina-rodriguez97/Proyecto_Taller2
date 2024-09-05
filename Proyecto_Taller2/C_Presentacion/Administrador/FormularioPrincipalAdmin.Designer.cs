@@ -40,7 +40,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(245, 237, 237);
+            panel1.BackColor = Color.FromArgb(247, 251, 255);
             panel1.Controls.Add(debug);
             panel1.Controls.Add(btnListarProductos);
             panel1.Controls.Add(button1);
@@ -49,7 +49,7 @@
             panel1.Controls.Add(btnNuevoUsuario);
             panel1.Location = new Point(3, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(277, 607);
+            panel1.Size = new Size(285, 607);
             panel1.TabIndex = 1;
             // 
             // debug
