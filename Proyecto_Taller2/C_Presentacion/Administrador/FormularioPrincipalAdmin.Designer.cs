@@ -49,7 +49,7 @@
             panel1.Controls.Add(btnNuevoUsuario);
             panel1.Location = new Point(3, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(320, 607);
+            panel1.Size = new Size(277, 607);
             panel1.TabIndex = 1;
             // 
             // debug
@@ -63,7 +63,7 @@
             // 
             // btnListarProductos
             // 
-            btnListarProductos.Location = new Point(42, 329);
+            btnListarProductos.Location = new Point(9, 328);
             btnListarProductos.Name = "btnListarProductos";
             btnListarProductos.Size = new Size(241, 49);
             btnListarProductos.TabIndex = 4;
@@ -72,18 +72,19 @@
             // 
             // button1
             // 
-            button1.Location = new Point(42, 155);
+            button1.Location = new Point(9, 163);
             button1.Name = "button1";
             button1.Size = new Size(241, 43);
             button1.TabIndex = 3;
             button1.Text = "Listar Usuarios";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // lblMenuAdmin
             // 
             lblMenuAdmin.AutoSize = true;
             lblMenuAdmin.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMenuAdmin.Location = new Point(9, 31);
+            lblMenuAdmin.Location = new Point(0, 31);
             lblMenuAdmin.Name = "lblMenuAdmin";
             lblMenuAdmin.Size = new Size(288, 32);
             lblMenuAdmin.TabIndex = 2;
@@ -91,7 +92,7 @@
             // 
             // btnNuevoProducto
             // 
-            btnNuevoProducto.Location = new Point(42, 262);
+            btnNuevoProducto.Location = new Point(9, 264);
             btnNuevoProducto.Name = "btnNuevoProducto";
             btnNuevoProducto.Size = new Size(241, 49);
             btnNuevoProducto.TabIndex = 1;
@@ -101,7 +102,7 @@
             // 
             // btnNuevoUsuario
             // 
-            btnNuevoUsuario.Location = new Point(42, 97);
+            btnNuevoUsuario.Location = new Point(9, 105);
             btnNuevoUsuario.Name = "btnNuevoUsuario";
             btnNuevoUsuario.Size = new Size(241, 43);
             btnNuevoUsuario.TabIndex = 0;

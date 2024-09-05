@@ -29,7 +29,7 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             form.MdiParent = this;
             form.Show();
 
-  
+
         }
 
         private void btnNuevoProducto_Click(object sender, EventArgs e)
@@ -42,5 +42,12 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             form.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.Count == 2) return;
+            Form form = new formListarUsuarios();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
