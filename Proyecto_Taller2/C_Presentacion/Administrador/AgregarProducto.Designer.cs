@@ -154,7 +154,7 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(lblDescripcion);
             panel1.Controls.Add(btnAgregar);
-            panel1.Location = new Point(420, 0);
+            panel1.Location = new Point(190, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(500, 600);
             panel1.TabIndex = 11;
@@ -164,7 +164,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1180, 600);
+            ClientSize = new Size(880, 600);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AgregarProducto";

@@ -154,19 +154,13 @@
             // 
             // btnRegistrar
             // 
-            btnRegistrar.BackColor = Color.Transparent;
-            btnRegistrar.FlatAppearance.BorderColor = Color.Teal;
-            btnRegistrar.FlatAppearance.BorderSize = 2;
-            btnRegistrar.FlatAppearance.MouseDownBackColor = Color.Black;
-            btnRegistrar.FlatAppearance.MouseOverBackColor = Color.Azure;
-            btnRegistrar.FlatStyle = FlatStyle.Flat;
+            btnRegistrar.FlatStyle = FlatStyle.System;
             btnRegistrar.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRegistrar.Location = new Point(311, 504);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(138, 45);
             btnRegistrar.TabIndex = 10;
             btnRegistrar.Text = "Registrar usuario";
-            btnRegistrar.UseVisualStyleBackColor = false;
             btnRegistrar.Click += btnRegistrar_Click;
             // 
             // lblAltaDeUsuario
@@ -209,7 +203,7 @@
             panel1.Controls.Add(lblApellido);
             panel1.Controls.Add(tbxNombre);
             panel1.Controls.Add(lblNombre);
-            panel1.Location = new Point(450, 0);
+            panel1.Location = new Point(190, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(500, 600);
             panel1.TabIndex = 0;
@@ -254,7 +248,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(1180, 600);
+            ClientSize = new Size(880, 600);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;

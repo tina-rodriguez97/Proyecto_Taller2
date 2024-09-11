@@ -49,5 +49,23 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             form.MdiParent = this;
             form.Show();
         }
+
+        private void Principal_Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListarProductos_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.Count == 2) return;
+            Form form = new ListarProductos();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
