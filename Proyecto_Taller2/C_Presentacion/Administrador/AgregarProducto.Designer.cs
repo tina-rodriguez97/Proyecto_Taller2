@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             lblAgregarProducto = new Label();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             lblDescripcion = new Label();
             btnAgregar = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            tbxNombre = new TextBox();
+            tbxDescripcion = new TextBox();
             btnCancelar = new Button();
             panel1 = new Panel();
             comboBox1 = new ComboBox();
@@ -47,7 +48,9 @@
             cbxTalleL = new CheckBox();
             cbxTalleM = new CheckBox();
             cbxTalleS = new CheckBox();
+            errorProvider = new ErrorProvider(components);
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // lblAgregarProducto
@@ -108,21 +111,22 @@
             btnAgregar.TabIndex = 5;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
+            btnAgregar.Click += btnAgregar_Click;
             // 
-            // textBox1
+            // tbxNombre
             // 
-            textBox1.Location = new Point(165, 106);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(242, 23);
-            textBox1.TabIndex = 6;
+            tbxNombre.Location = new Point(165, 106);
+            tbxNombre.Name = "tbxNombre";
+            tbxNombre.Size = new Size(242, 23);
+            tbxNombre.TabIndex = 6;
             // 
-            // textBox2
+            // tbxDescripcion
             // 
-            textBox2.Location = new Point(165, 152);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(242, 76);
-            textBox2.TabIndex = 7;
+            tbxDescripcion.Location = new Point(165, 152);
+            tbxDescripcion.Multiline = true;
+            tbxDescripcion.Name = "tbxDescripcion";
+            tbxDescripcion.Size = new Size(242, 76);
+            tbxDescripcion.TabIndex = 7;
             // 
             // btnCancelar
             // 
@@ -146,12 +150,12 @@
             panel1.Controls.Add(cbxTalleL);
             panel1.Controls.Add(cbxTalleM);
             panel1.Controls.Add(cbxTalleS);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(tbxNombre);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(lblAgregarProducto);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(tbxDescripcion);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(lblDescripcion);
             panel1.Controls.Add(btnAgregar);
@@ -248,6 +252,11 @@
             cbxTalleS.Text = "S";
             cbxTalleS.UseVisualStyleBackColor = true;
             // 
+            // errorProvider
+            // 
+            errorProvider.BlinkRate = 300;
+            errorProvider.ContainerControl = this;
+            // 
             // AgregarProducto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -261,6 +270,7 @@
             Text = "AgregarProducto";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
         }
 
@@ -272,8 +282,8 @@
         private Label label3;
         private Label lblDescripcion;
         private Button btnAgregar;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox tbxNombre;
+        private TextBox tbxDescripcion;
         private Button btnCancelar;
         private Panel panel1;
         private CheckBox cbxTalleL;
@@ -285,5 +295,6 @@
         private TextBox tbxTalleL;
         private TextBox tbxTalleM;
         private TextBox tbxTalleS;
+        private ErrorProvider errorProvider;
     }
 }

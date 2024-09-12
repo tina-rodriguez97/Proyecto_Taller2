@@ -34,7 +34,19 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
         private void cbxTalleXL_CheckedChanged(object sender, EventArgs e)
         {
-            if(cbxTalleXL.Checked) tbxTalleXL.Enabled = true; else tbxTalleXL.Enabled= false;
+            if (cbxTalleXL.Checked) tbxTalleXL.Enabled = true; else tbxTalleXL.Enabled = false;
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Validador val = new Validador();
+
+            val.validarCampo(errorProvider,tbxNombre,2);
+
+
+            var result = MessageBox.Show("LLEGA", "Cancelar accion",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question);
         }
     }
 }
