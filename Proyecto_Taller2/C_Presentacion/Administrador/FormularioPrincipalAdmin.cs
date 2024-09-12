@@ -12,8 +12,6 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 {
     public partial class Principal_Admin : Form
     {
-
-        private bool _isFormOpen = false;
         public Principal_Admin()
         {
             InitializeComponent();
@@ -22,8 +20,8 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
 
-
-            if (Application.OpenForms.Count == 2) return;
+            
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
 
             Form form = new formAltaUsuarioAdmin();
             form.MdiParent = this;
@@ -34,8 +32,7 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
         private void btnNuevoProducto_Click(object sender, EventArgs e)
         {
-
-            if (Application.OpenForms.Count == 2) return;
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
 
             Form form = new AgregarProducto();
             form.MdiParent = this;
@@ -44,7 +41,7 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.Count == 2) return;
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
             Form form = new formListarUsuarios();
             form.MdiParent = this;
             form.Show();
@@ -57,7 +54,7 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
         private void btnListarProductos_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.Count == 2) return;
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
             Form form = new ListarProductos();
             form.MdiParent = this;
             form.Show();
@@ -66,6 +63,12 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
         private void lblUsuario_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            debug.Text = Application.OpenForms.Count.ToString();
         }
     }
 }

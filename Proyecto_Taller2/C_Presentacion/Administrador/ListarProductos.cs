@@ -21,5 +21,10 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
         {
             this.Close();
         }
+
+        private void test_Click(object sender, EventArgs e)
+        {
+            new EditarProducto().ShowDialog();
+        }
     }
 }

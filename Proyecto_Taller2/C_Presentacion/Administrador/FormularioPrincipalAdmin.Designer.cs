@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button2 = new Button();
+            debug = new Label();
             btnListarProductos = new Button();
             button1 = new Button();
             lblMenuAdmin = new Label();
@@ -44,6 +46,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(debug);
             panel1.Controls.Add(btnListarProductos);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(lblMenuAdmin);
@@ -54,6 +58,25 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(300, 661);
             panel1.TabIndex = 1;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(165, 431);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 23);
+            button2.TabIndex = 6;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // debug
+            // 
+            debug.AutoSize = true;
+            debug.Location = new Point(3, 510);
+            debug.Name = "debug";
+            debug.Size = new Size(38, 15);
+            debug.TabIndex = 5;
+            debug.Text = "label1";
             // 
             // btnListarProductos
             // 
@@ -175,5 +198,7 @@
         private Panel panel2;
         private LinkLabel lblCerrarSesion;
         private Label lblUsuario;
+        private Label debug;
+        private Button button2;
     }
 }

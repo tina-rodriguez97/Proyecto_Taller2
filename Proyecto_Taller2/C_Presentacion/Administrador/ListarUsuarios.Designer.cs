@@ -39,6 +39,7 @@
             Editar = new DataGridViewButtonColumn();
             col_eliminar = new DataGridViewButtonColumn();
             panel1 = new Panel();
+            test = new Button();
             btnBuscar = new Button();
             textBox1 = new TextBox();
             lblBuscar = new Label();
@@ -116,6 +117,7 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(test);
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(lblBuscar);
@@ -128,9 +130,19 @@
             panel1.Size = new Size(880, 89);
             panel1.TabIndex = 1;
             // 
+            // test
+            // 
+            test.Location = new Point(775, 18);
+            test.Name = "test";
+            test.Size = new Size(75, 23);
+            test.TabIndex = 6;
+            test.Text = "test editar";
+            test.UseVisualStyleBackColor = true;
+            test.Click += test_Click;
+            // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(517, 52);
+            btnBuscar.Location = new Point(621, 52);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(75, 23);
             btnBuscar.TabIndex = 5;
@@ -139,7 +151,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(373, 52);
+            textBox1.Location = new Point(462, 52);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(138, 23);
             textBox1.TabIndex = 4;
@@ -148,7 +160,7 @@
             // 
             lblBuscar.AutoSize = true;
             lblBuscar.Font = new Font("Segoe UI", 14F);
-            lblBuscar.Location = new Point(261, 21);
+            lblBuscar.Location = new Point(350, 20);
             lblBuscar.Name = "lblBuscar";
             lblBuscar.Size = new Size(106, 25);
             lblBuscar.TabIndex = 3;
@@ -157,7 +169,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(373, 23);
+            comboBox2.Location = new Point(462, 21);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(138, 23);
             comboBox2.TabIndex = 2;
@@ -230,5 +242,6 @@
         private DataGridViewTextBoxColumn col_activo;
         private DataGridViewButtonColumn Editar;
         private DataGridViewButtonColumn col_eliminar;
+        private Button test;
     }
 }

@@ -46,9 +46,11 @@
             btnCancelar = new Button();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
-            comboBox1 = new ComboBox();
+            cbxRol = new ComboBox();
             lblRol = new Label();
             errorProvider = new ErrorProvider(components);
+            lblTelefono = new Label();
+            tbxTelefono = new TextBox();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -63,17 +65,17 @@
             // lblNombre
             // 
             lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNombre.Font = new Font("Franklin Gothic Medium", 14.25F);
             lblNombre.Location = new Point(68, 112);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(92, 25);
+            lblNombre.Size = new Size(80, 24);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre:";
             lblNombre.Click += lblNombre_Click;
             // 
             // tbxNombre
             // 
-            tbxNombre.BackColor = Color.FromArgb(255, 252, 247);
+            tbxNombre.BackColor = SystemColors.Window;
             tbxNombre.Location = new Point(181, 112);
             tbxNombre.Margin = new Padding(3, 3, 10, 3);
             tbxNombre.Name = "tbxNombre";
@@ -85,7 +87,7 @@
             // 
             lblApellido.AutoSize = true;
             lblApellido.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblApellido.Location = new Point(68, 159);
+            lblApellido.Location = new Point(68, 150);
             lblApellido.Name = "lblApellido";
             lblApellido.Size = new Size(81, 24);
             lblApellido.TabIndex = 2;
@@ -93,7 +95,7 @@
             // 
             // tbxApellido
             // 
-            tbxApellido.Location = new Point(181, 159);
+            tbxApellido.Location = new Point(181, 150);
             tbxApellido.Margin = new Padding(3, 3, 10, 3);
             tbxApellido.Name = "tbxApellido";
             tbxApellido.Size = new Size(211, 23);
@@ -103,7 +105,7 @@
             // 
             lblUsuario.AutoSize = true;
             lblUsuario.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblUsuario.Location = new Point(68, 262);
+            lblUsuario.Location = new Point(68, 318);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(76, 24);
             lblUsuario.TabIndex = 4;
@@ -111,7 +113,7 @@
             // 
             // tbxUser
             // 
-            tbxUser.Location = new Point(181, 265);
+            tbxUser.Location = new Point(181, 321);
             tbxUser.Name = "tbxUser";
             tbxUser.Size = new Size(211, 23);
             tbxUser.TabIndex = 5;
@@ -120,7 +122,7 @@
             // 
             lblDni.AutoSize = true;
             lblDni.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDni.Location = new Point(68, 201);
+            lblDni.Location = new Point(68, 192);
             lblDni.Name = "lblDni";
             lblDni.Size = new Size(42, 24);
             lblDni.TabIndex = 6;
@@ -128,7 +130,7 @@
             // 
             // tbxClave
             // 
-            tbxClave.Location = new Point(181, 305);
+            tbxClave.Location = new Point(181, 361);
             tbxClave.Name = "tbxClave";
             tbxClave.Size = new Size(211, 23);
             tbxClave.TabIndex = 7;
@@ -138,7 +140,7 @@
             // 
             lblContrasena.AutoSize = true;
             lblContrasena.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblContrasena.Location = new Point(68, 305);
+            lblContrasena.Location = new Point(68, 361);
             lblContrasena.Name = "lblContrasena";
             lblContrasena.Size = new Size(107, 24);
             lblContrasena.TabIndex = 8;
@@ -146,7 +148,7 @@
             // 
             // tbxDni
             // 
-            tbxDni.Location = new Point(181, 201);
+            tbxDni.Location = new Point(181, 192);
             tbxDni.Name = "tbxDni";
             tbxDni.Size = new Size(211, 23);
             tbxDni.TabIndex = 9;
@@ -187,8 +189,10 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(tbxTelefono);
+            panel1.Controls.Add(lblTelefono);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(cbxRol);
             panel1.Controls.Add(lblRol);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(lblAltaDeUsuario);
@@ -218,20 +222,20 @@
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // cbxRol
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Vendedor", "Administrador", "Supervisor" });
-            comboBox1.Location = new Point(181, 387);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(211, 23);
-            comboBox1.TabIndex = 15;
+            cbxRol.FormattingEnabled = true;
+            cbxRol.Items.AddRange(new object[] { "Vendedor", "Administrador", "Supervisor" });
+            cbxRol.Location = new Point(181, 443);
+            cbxRol.Name = "cbxRol";
+            cbxRol.Size = new Size(211, 23);
+            cbxRol.TabIndex = 15;
             // 
             // lblRol
             // 
             lblRol.AutoSize = true;
             lblRol.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblRol.Location = new Point(68, 387);
+            lblRol.Location = new Point(68, 443);
             lblRol.Name = "lblRol";
             lblRol.Size = new Size(42, 24);
             lblRol.TabIndex = 13;
@@ -242,6 +246,23 @@
             errorProvider.BlinkRate = 300;
             errorProvider.ContainerControl = this;
             errorProvider.Icon = (Icon)resources.GetObject("errorProvider.Icon");
+            // 
+            // lblTelefono
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTelefono.Location = new Point(68, 229);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(85, 24);
+            lblTelefono.TabIndex = 17;
+            lblTelefono.Text = "Telefono:";
+            // 
+            // tbxTelefono
+            // 
+            tbxTelefono.Location = new Point(181, 229);
+            tbxTelefono.Name = "tbxTelefono";
+            tbxTelefono.Size = new Size(211, 23);
+            tbxTelefono.TabIndex = 18;
             // 
             // formAltaUsuarioAdmin
             // 
@@ -281,9 +302,11 @@
         private Label lblApellido;
         private TextBox tbxNombre;
         private Label lblNombre;
-        private ComboBox comboBox1;
+        private ComboBox cbxRol;
         private Label lblRol;
         private PictureBox pictureBox1;
         private ErrorProvider errorProvider;
+        private TextBox tbxTelefono;
+        private Label lblTelefono;
     }
 }

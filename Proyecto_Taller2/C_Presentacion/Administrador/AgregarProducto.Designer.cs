@@ -36,10 +36,17 @@
             btnAgregar = new Button();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
             btnCancelar = new Button();
             panel1 = new Panel();
+            comboBox1 = new ComboBox();
+            tbxTalleXL = new TextBox();
+            tbxTalleL = new TextBox();
+            tbxTalleM = new TextBox();
+            tbxTalleS = new TextBox();
+            cbxTalleXL = new CheckBox();
+            cbxTalleL = new CheckBox();
+            cbxTalleM = new CheckBox();
+            cbxTalleS = new CheckBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,40 +63,40 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(33, 99);
+            label1.Font = new Font("Franklin Gothic Medium", 14.25F);
+            label1.Location = new Point(34, 103);
             label1.Name = "label1";
-            label1.Size = new Size(94, 30);
+            label1.Size = new Size(80, 24);
             label1.TabIndex = 1;
             label1.Text = "Nombre:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(33, 216);
+            label2.Font = new Font("Franklin Gothic Medium", 14.25F);
+            label2.Location = new Point(34, 249);
             label2.Name = "label2";
-            label2.Size = new Size(107, 30);
+            label2.Size = new Size(93, 24);
             label2.TabIndex = 2;
             label2.Text = "Categoria:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(33, 268);
+            label3.Font = new Font("Franklin Gothic Medium", 14.25F);
+            label3.Location = new Point(32, 306);
             label3.Name = "label3";
-            label3.Size = new Size(127, 30);
+            label3.Size = new Size(115, 24);
             label3.TabIndex = 3;
             label3.Text = "Stock Inicial:";
             // 
             // lblDescripcion
             // 
             lblDescripcion.AutoSize = true;
-            lblDescripcion.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDescripcion.Location = new Point(32, 158);
+            lblDescripcion.Font = new Font("Franklin Gothic Medium", 14.25F);
+            lblDescripcion.Location = new Point(34, 152);
             lblDescripcion.Name = "lblDescripcion";
-            lblDescripcion.Size = new Size(126, 30);
+            lblDescripcion.Size = new Size(110, 24);
             lblDescripcion.TabIndex = 4;
             lblDescripcion.Text = "Descripcion:";
             // 
@@ -111,24 +118,11 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(165, 165);
+            textBox2.Location = new Point(165, 152);
+            textBox2.Multiline = true;
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(242, 23);
+            textBox2.Size = new Size(242, 76);
             textBox2.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(165, 223);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(242, 23);
-            textBox3.TabIndex = 8;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(165, 275);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(242, 23);
-            textBox4.TabIndex = 9;
             // 
             // btnCancelar
             // 
@@ -143,12 +137,19 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(tbxTalleXL);
+            panel1.Controls.Add(tbxTalleL);
+            panel1.Controls.Add(tbxTalleM);
+            panel1.Controls.Add(tbxTalleS);
+            panel1.Controls.Add(cbxTalleXL);
+            panel1.Controls.Add(cbxTalleL);
+            panel1.Controls.Add(cbxTalleM);
+            panel1.Controls.Add(cbxTalleS);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(btnCancelar);
             panel1.Controls.Add(lblAgregarProducto);
-            panel1.Controls.Add(textBox4);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBox3);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label3);
@@ -158,6 +159,94 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(500, 600);
             panel1.TabIndex = 11;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(165, 249);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(242, 23);
+            comboBox1.TabIndex = 19;
+            // 
+            // tbxTalleXL
+            // 
+            tbxTalleXL.Enabled = false;
+            tbxTalleXL.Location = new Point(206, 393);
+            tbxTalleXL.Name = "tbxTalleXL";
+            tbxTalleXL.Size = new Size(45, 23);
+            tbxTalleXL.TabIndex = 18;
+            // 
+            // tbxTalleL
+            // 
+            tbxTalleL.Enabled = false;
+            tbxTalleL.Location = new Point(206, 364);
+            tbxTalleL.Name = "tbxTalleL";
+            tbxTalleL.Size = new Size(45, 23);
+            tbxTalleL.TabIndex = 17;
+            // 
+            // tbxTalleM
+            // 
+            tbxTalleM.Enabled = false;
+            tbxTalleM.Location = new Point(206, 335);
+            tbxTalleM.Name = "tbxTalleM";
+            tbxTalleM.Size = new Size(45, 23);
+            tbxTalleM.TabIndex = 16;
+            // 
+            // tbxTalleS
+            // 
+            tbxTalleS.Location = new Point(206, 306);
+            tbxTalleS.Name = "tbxTalleS";
+            tbxTalleS.Size = new Size(45, 23);
+            tbxTalleS.TabIndex = 15;
+            // 
+            // cbxTalleXL
+            // 
+            cbxTalleXL.AutoSize = true;
+            cbxTalleXL.Font = new Font("Segoe UI", 11F);
+            cbxTalleXL.Location = new Point(164, 393);
+            cbxTalleXL.Name = "cbxTalleXL";
+            cbxTalleXL.Size = new Size(44, 24);
+            cbxTalleXL.TabIndex = 14;
+            cbxTalleXL.Text = "XL";
+            cbxTalleXL.UseVisualStyleBackColor = true;
+            cbxTalleXL.CheckedChanged += cbxTalleXL_CheckedChanged;
+            // 
+            // cbxTalleL
+            // 
+            cbxTalleL.AutoSize = true;
+            cbxTalleL.Font = new Font("Segoe UI", 11F);
+            cbxTalleL.Location = new Point(164, 364);
+            cbxTalleL.Name = "cbxTalleL";
+            cbxTalleL.Size = new Size(35, 24);
+            cbxTalleL.TabIndex = 13;
+            cbxTalleL.Text = "L";
+            cbxTalleL.UseVisualStyleBackColor = true;
+            cbxTalleL.CheckedChanged += cbxTalleL_CheckedChanged;
+            // 
+            // cbxTalleM
+            // 
+            cbxTalleM.AutoSize = true;
+            cbxTalleM.Font = new Font("Segoe UI", 11F);
+            cbxTalleM.Location = new Point(164, 335);
+            cbxTalleM.Name = "cbxTalleM";
+            cbxTalleM.Size = new Size(41, 24);
+            cbxTalleM.TabIndex = 12;
+            cbxTalleM.Text = "M";
+            cbxTalleM.UseVisualStyleBackColor = true;
+            cbxTalleM.CheckedChanged += cbxTalleM_CheckedChanged;
+            // 
+            // cbxTalleS
+            // 
+            cbxTalleS.AutoSize = true;
+            cbxTalleS.Checked = true;
+            cbxTalleS.CheckState = CheckState.Checked;
+            cbxTalleS.Font = new Font("Segoe UI", 11F);
+            cbxTalleS.Location = new Point(164, 306);
+            cbxTalleS.Name = "cbxTalleS";
+            cbxTalleS.Size = new Size(36, 24);
+            cbxTalleS.TabIndex = 11;
+            cbxTalleS.Text = "S";
+            cbxTalleS.UseVisualStyleBackColor = true;
             // 
             // AgregarProducto
             // 
@@ -185,9 +274,16 @@
         private Button btnAgregar;
         private TextBox textBox1;
         private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
         private Button btnCancelar;
         private Panel panel1;
+        private CheckBox cbxTalleL;
+        private CheckBox cbxTalleM;
+        private CheckBox cbxTalleS;
+        private CheckBox cbxTalleXL;
+        private ComboBox comboBox1;
+        private TextBox tbxTalleXL;
+        private TextBox tbxTalleL;
+        private TextBox tbxTalleM;
+        private TextBox tbxTalleS;
     }
 }

@@ -21,5 +21,20 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
         {
             this.Close();
         }
+
+        private void cbxTalleM_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxTalleM.Checked) tbxTalleM.Enabled = true; else tbxTalleM.Enabled = false;
+        }
+
+        private void cbxTalleL_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxTalleL.Checked) tbxTalleL.Enabled = true; else tbxTalleL.Enabled = false;
+        }
+
+        private void cbxTalleXL_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbxTalleXL.Checked) tbxTalleXL.Enabled = true; else tbxTalleXL.Enabled= false;
+        }
     }
 }

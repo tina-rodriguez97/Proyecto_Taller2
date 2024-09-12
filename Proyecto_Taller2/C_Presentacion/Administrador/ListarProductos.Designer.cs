@@ -43,12 +43,14 @@
             col_categoriaProducto = new DataGridViewTextBoxColumn();
             col_editarProducto = new DataGridViewTextBoxColumn();
             btnSalir = new Button();
+            test = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(test);
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(tbxBuscarNombre);
             panel1.Controls.Add(lblBuscar);
@@ -177,6 +179,16 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
+            // test
+            // 
+            test.Location = new Point(714, 55);
+            test.Name = "test";
+            test.Size = new Size(75, 23);
+            test.TabIndex = 7;
+            test.Text = "test editar";
+            test.UseVisualStyleBackColor = true;
+            test.Click += test_Click;
+            // 
             // ListarProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -212,5 +224,6 @@
         private ComboBox comboBox1;
         private Label lblFiltro;
         private Button btnSalir;
+        private Button test;
     }
 }
