@@ -37,16 +37,19 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             if (cbxTalleXL.Checked) tbxTalleXL.Enabled = true; else tbxTalleXL.Enabled = false;
         }
 
+        private bool todosSonVaolidos()
+        {
+            Validador validador = new Validador();
+
+            return validador.validarCampo(errorProvider, tbxNombre, 5)
+                && validador.validarCampo(errorProvider, tbxDescripcion, 10);
+
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Validador val = new Validador();
 
-            val.validarCampo(errorProvider,tbxNombre,2);
-
-
-            var result = MessageBox.Show("LLEGA", "Cancelar accion",
-                                MessageBoxButtons.YesNo,
-                                MessageBoxIcon.Question);
+            if (todosSonVaolidos()) return;
+  
         }
     }
 }

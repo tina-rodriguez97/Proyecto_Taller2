@@ -45,12 +45,12 @@
             lblAltaDeUsuario = new Label();
             btnCancelar = new Button();
             panel1 = new Panel();
+            tbxTelefono = new TextBox();
+            lblTelefono = new Label();
             pictureBox1 = new PictureBox();
             cbxRol = new ComboBox();
             lblRol = new Label();
             errorProvider = new ErrorProvider(components);
-            lblTelefono = new Label();
-            tbxTelefono = new TextBox();
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -188,6 +188,7 @@
             // 
             // panel1
             // 
+            panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(247, 251, 255);
             panel1.Controls.Add(tbxTelefono);
             panel1.Controls.Add(lblTelefono);
@@ -211,6 +212,23 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(500, 600);
             panel1.TabIndex = 0;
+            // 
+            // tbxTelefono
+            // 
+            tbxTelefono.Location = new Point(181, 229);
+            tbxTelefono.Name = "tbxTelefono";
+            tbxTelefono.Size = new Size(211, 23);
+            tbxTelefono.TabIndex = 18;
+            // 
+            // lblTelefono
+            // 
+            lblTelefono.AutoSize = true;
+            lblTelefono.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTelefono.Location = new Point(68, 229);
+            lblTelefono.Name = "lblTelefono";
+            lblTelefono.Size = new Size(85, 24);
+            lblTelefono.TabIndex = 17;
+            lblTelefono.Text = "Telefono:";
             // 
             // pictureBox1
             // 
@@ -247,23 +265,6 @@
             errorProvider.ContainerControl = this;
             errorProvider.Icon = (Icon)resources.GetObject("errorProvider.Icon");
             // 
-            // lblTelefono
-            // 
-            lblTelefono.AutoSize = true;
-            lblTelefono.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTelefono.Location = new Point(68, 229);
-            lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(85, 24);
-            lblTelefono.TabIndex = 17;
-            lblTelefono.Text = "Telefono:";
-            // 
-            // tbxTelefono
-            // 
-            tbxTelefono.Location = new Point(181, 229);
-            tbxTelefono.Name = "tbxTelefono";
-            tbxTelefono.Size = new Size(211, 23);
-            tbxTelefono.TabIndex = 18;
-            // 
             // formAltaUsuarioAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -276,7 +277,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "formAltaUsuarioAdmin";
-            StartPosition = FormStartPosition.Manual;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Alta de Usuario";
             ((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
             panel1.ResumeLayout(false);

@@ -32,31 +32,22 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             if (this.todosLosCamposValidados()) return;
         }
 
-        private bool validarCampo(TextBox tb)
-        {
-            errorProvider.Clear();
-
-            if (string.IsNullOrEmpty(tb.Text))
-            {
-                errorProvider.SetError(tb, "Este campo es requerido");
-                return false;
-            }
-
-            return true;
-        }
         private bool todosLosCamposValidados()
         {
-            return this.validarCampo(tbxNombre) &&
-                    this.validarCampo(tbxApellido) &&
-                    this.validarCampo(tbxDni) &&
-                    this.validarCampo(tbxClave) &&
-                    this.validarCampo(tbxUser);
+
+            Validador validador = new Validador();
+            return validador.validarCampo(errorProvider, tbxNombre) 
+                && validador.validarCampo(errorProvider, tbxApellido)
+                && validador.validarCampo(errorProvider, tbxDni, 8)
+                && validador.validarCampo(errorProvider, tbxTelefono, 11)
+                && validador.validarCampo(errorProvider, tbxUser)
+                && validador.validarCampo(errorProvider, tbxClave, 5);
 
         }
 
         private void tbxNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = char.IsDigit(e.KeyChar);
+            e.Handled = char.IsDigit(e.KeyChar); 
         }
 
         private void tbxDni_KeyPress(object sender, KeyPressEventArgs e)

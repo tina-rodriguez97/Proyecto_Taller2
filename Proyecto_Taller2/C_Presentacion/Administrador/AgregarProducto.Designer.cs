@@ -261,12 +261,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(880, 600);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AgregarProducto";
-            StartPosition = FormStartPosition.Manual;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AgregarProducto";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
