@@ -30,28 +30,23 @@
         {
             panel1 = new Panel();
             ptbLogo = new PictureBox();
-            button2 = new Button();
+            btnCerrarSesion = new Button();
             lblUsuario = new Label();
-            debug = new Label();
             btnListarProductos = new Button();
             button1 = new Button();
             lblMenuAdmin = new Label();
             btnNuevoProducto = new Button();
             btnNuevoUsuario = new Button();
-            panel2 = new Panel();
-            lblCerrarSesion = new LinkLabel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
             panel1.Controls.Add(ptbLogo);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnCerrarSesion);
             panel1.Controls.Add(lblUsuario);
-            panel1.Controls.Add(debug);
             panel1.Controls.Add(btnListarProductos);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(lblMenuAdmin);
@@ -73,15 +68,16 @@
             ptbLogo.TabIndex = 7;
             ptbLogo.TabStop = false;
             // 
-            // button2
+            // btnCerrarSesion
             // 
-            button2.Location = new Point(172, 597);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 6;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnCerrarSesion.BackColor = Color.LightCoral;
+            btnCerrarSesion.Location = new Point(12, 592);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(279, 32);
+            btnCerrarSesion.TabIndex = 6;
+            btnCerrarSesion.Text = "Cerrar sesion";
+            btnCerrarSesion.UseVisualStyleBackColor = false;
+            btnCerrarSesion.Click += button2_Click;
             // 
             // lblUsuario
             // 
@@ -93,15 +89,6 @@
             lblUsuario.TabIndex = 0;
             lblUsuario.Text = "Conectado como: (Name)";
             lblUsuario.Click += lblUsuario_Click;
-            // 
-            // debug
-            // 
-            debug.AutoSize = true;
-            debug.Location = new Point(25, 597);
-            debug.Name = "debug";
-            debug.Size = new Size(38, 15);
-            debug.TabIndex = 5;
-            debug.Text = "label1";
             // 
             // btnListarProductos
             // 
@@ -153,43 +140,17 @@
             btnNuevoUsuario.UseVisualStyleBackColor = true;
             btnNuevoUsuario.Click += btnNuevoUsuario_Click;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.White;
-            panel2.Controls.Add(lblCerrarSesion);
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(300, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(884, 63);
-            panel2.TabIndex = 3;
-            panel2.Visible = false;
-            // 
-            // lblCerrarSesion
-            // 
-            lblCerrarSesion.AutoSize = true;
-            lblCerrarSesion.Font = new Font("Segoe UI", 11F);
-            lblCerrarSesion.LinkColor = Color.Black;
-            lblCerrarSesion.Location = new Point(753, 22);
-            lblCerrarSesion.Name = "lblCerrarSesion";
-            lblCerrarSesion.Size = new Size(94, 20);
-            lblCerrarSesion.TabIndex = 1;
-            lblCerrarSesion.TabStop = true;
-            lblCerrarSesion.Text = "Cerrar sesion";
-            lblCerrarSesion.VisitedLinkColor = Color.Black;
-            // 
             // Principal_Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(224, 236, 255);
             ClientSize = new Size(1184, 661);
-            Controls.Add(panel2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             IsMdiContainer = true;
             MaximizeBox = false;
             MdiChildrenMinimizedAnchorBottom = false;
-            MinimizeBox = false;
             Name = "Principal_Admin";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormularioPrincipalAdmin";
@@ -197,8 +158,6 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).EndInit();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -210,11 +169,9 @@
         private Label lblMenuAdmin;
         private Button btnListarProductos;
         private Button button1;
-        private Panel panel2;
-        private LinkLabel lblCerrarSesion;
         private Label lblUsuario;
         private Label debug;
-        private Button button2;
+        private Button btnCerrarSesion;
         private PictureBox ptbLogo;
     }
 }

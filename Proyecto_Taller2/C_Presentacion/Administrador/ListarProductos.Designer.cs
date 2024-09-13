@@ -44,6 +44,8 @@
             col_categoriaProducto = new DataGridViewTextBoxColumn();
             col_editarProducto = new DataGridViewTextBoxColumn();
             btnSalir = new Button();
+            lblListarProductos = new Label();
+            btnFiltro = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -51,6 +53,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(btnFiltro);
+            panel1.Controls.Add(lblListarProductos);
             panel1.Controls.Add(test);
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(tbxBuscarNombre);
@@ -65,7 +69,7 @@
             // 
             // test
             // 
-            test.Location = new Point(714, 55);
+            test.Location = new Point(274, 38);
             test.Name = "test";
             test.Size = new Size(75, 23);
             test.TabIndex = 7;
@@ -92,17 +96,17 @@
             // lblBuscar
             // 
             lblBuscar.AutoSize = true;
-            lblBuscar.Font = new Font("Franklin Gothic Medium", 14.25F);
-            lblBuscar.Location = new Point(385, 24);
+            lblBuscar.Font = new Font("Franklin Gothic Medium", 12F);
+            lblBuscar.Location = new Point(411, 27);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(170, 24);
+            lblBuscar.Size = new Size(144, 21);
             lblBuscar.TabIndex = 2;
             lblBuscar.Text = "Buscar por nombre:";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(225, 25);
+            comboBox1.Location = new Point(561, 58);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(147, 23);
             comboBox1.TabIndex = 1;
@@ -110,10 +114,10 @@
             // lblFiltro
             // 
             lblFiltro.AutoSize = true;
-            lblFiltro.Font = new Font("Franklin Gothic Medium", 14.25F);
-            lblFiltro.Location = new Point(44, 25);
+            lblFiltro.Font = new Font("Franklin Gothic Medium", 12F);
+            lblFiltro.Location = new Point(411, 58);
             lblFiltro.Name = "lblFiltro";
-            lblFiltro.Size = new Size(175, 24);
+            lblFiltro.Size = new Size(147, 21);
             lblFiltro.TabIndex = 0;
             lblFiltro.Text = "Filtrar por categoria:";
             // 
@@ -190,6 +194,25 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
+            // lblListarProductos
+            // 
+            lblListarProductos.AutoSize = true;
+            lblListarProductos.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblListarProductos.Location = new Point(12, 25);
+            lblListarProductos.Name = "lblListarProductos";
+            lblListarProductos.Size = new Size(131, 32);
+            lblListarProductos.TabIndex = 9;
+            lblListarProductos.Text = "Productos";
+            // 
+            // btnFiltro
+            // 
+            btnFiltro.Location = new Point(714, 58);
+            btnFiltro.Name = "btnFiltro";
+            btnFiltro.Size = new Size(75, 23);
+            btnFiltro.TabIndex = 10;
+            btnFiltro.Text = "Aplicar";
+            btnFiltro.UseVisualStyleBackColor = true;
+            // 
             // ListarProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -227,5 +250,7 @@
         private Label lblFiltro;
         private Button btnSalir;
         private Button test;
+        private Label lblListarProductos;
+        private Button btnFiltro;
     }
 }

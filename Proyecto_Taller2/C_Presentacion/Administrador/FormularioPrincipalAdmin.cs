@@ -68,7 +68,11 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
         private void button2_Click(object sender, EventArgs e)
         {
-            debug.Text = Application.OpenForms.Count.ToString();
+            var result = MessageBox.Show("Seguro que desea cerrar la sesion actual?", "Cerrar sesion",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes) this.Close();
         }
     }
 }

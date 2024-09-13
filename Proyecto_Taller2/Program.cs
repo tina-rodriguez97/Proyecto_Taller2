@@ -1,4 +1,5 @@
 using Proyecto_Taller2.C_Presentacion.Administrador;
+using Proyecto_Taller2.C_Presentacion.Supervisor;
 
 namespace Proyecto_Taller2
 {
@@ -13,7 +14,8 @@ namespace Proyecto_Taller2
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Principal_Admin());
+             Application.Run(new Principal_Admin());
+            //Application.Run(new FormularioPrincipalSupervisor());
         }
     }
 }

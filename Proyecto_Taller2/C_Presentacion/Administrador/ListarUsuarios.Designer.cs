@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             col_apellido = new DataGridViewTextBoxColumn();
             col_nombre = new DataGridViewTextBoxColumn();
@@ -39,6 +39,7 @@
             Editar = new DataGridViewButtonColumn();
             col_eliminar = new DataGridViewButtonColumn();
             panel1 = new Panel();
+            btnFiltro = new Button();
             test = new Button();
             btnBuscar = new Button();
             textBox1 = new TextBox();
@@ -47,7 +48,7 @@
             comboBox1 = new ComboBox();
             lblFiltro = new Label();
             btnSalir = new Button();
-            btnFiltro = new Button();
+            lblListarUsuarios = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -64,13 +65,13 @@
             dataGridView1.Location = new Point(12, 115);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.Size = new Size(840, 420);
             dataGridView1.TabIndex = 0;
@@ -119,6 +120,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(lblListarUsuarios);
             panel1.Controls.Add(btnFiltro);
             panel1.Controls.Add(test);
             panel1.Controls.Add(btnBuscar);
@@ -133,9 +135,18 @@
             panel1.Size = new Size(880, 89);
             panel1.TabIndex = 1;
             // 
+            // btnFiltro
+            // 
+            btnFiltro.Location = new Point(777, 18);
+            btnFiltro.Name = "btnFiltro";
+            btnFiltro.Size = new Size(75, 23);
+            btnFiltro.TabIndex = 7;
+            btnFiltro.Text = "Aplicar";
+            btnFiltro.UseVisualStyleBackColor = true;
+            // 
             // test
             // 
-            test.Location = new Point(775, 18);
+            test.Location = new Point(294, 53);
             test.Name = "test";
             test.Size = new Size(75, 23);
             test.TabIndex = 6;
@@ -145,7 +156,7 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(664, 24);
+            btnBuscar.Location = new Point(777, 55);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(75, 23);
             btnBuscar.TabIndex = 5;
@@ -154,44 +165,44 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(520, 54);
+            textBox1.Location = new Point(642, 55);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(138, 23);
+            textBox1.Size = new Size(118, 23);
             textBox1.TabIndex = 4;
             // 
             // lblBuscar
             // 
             lblBuscar.AutoSize = true;
-            lblBuscar.Font = new Font("Franklin Gothic Medium", 14.25F);
-            lblBuscar.Location = new Point(408, 22);
+            lblBuscar.Font = new Font("Franklin Gothic Medium", 12F);
+            lblBuscar.Location = new Point(442, 53);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(102, 24);
+            lblBuscar.Size = new Size(87, 21);
             lblBuscar.TabIndex = 3;
             lblBuscar.Text = "Buscar por:";
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(520, 23);
+            comboBox2.Location = new Point(535, 55);
             comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(138, 23);
+            comboBox2.Size = new Size(101, 23);
             comboBox2.TabIndex = 2;
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(117, 23);
+            comboBox1.Location = new Point(535, 19);
             comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(138, 23);
+            comboBox1.Size = new Size(225, 23);
             comboBox1.TabIndex = 1;
             // 
             // lblFiltro
             // 
             lblFiltro.AutoSize = true;
-            lblFiltro.Font = new Font("Franklin Gothic Medium", 14.25F);
-            lblFiltro.Location = new Point(12, 20);
+            lblFiltro.Font = new Font("Franklin Gothic Medium", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFiltro.Location = new Point(442, 20);
             lblFiltro.Name = "lblFiltro";
-            lblFiltro.Size = new Size(94, 24);
+            lblFiltro.Size = new Size(80, 21);
             lblFiltro.TabIndex = 0;
             lblFiltro.Text = "Filtrar por:";
             // 
@@ -205,14 +216,15 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
-            // btnFiltro
+            // lblListarUsuarios
             // 
-            btnFiltro.Location = new Point(261, 23);
-            btnFiltro.Name = "btnFiltro";
-            btnFiltro.Size = new Size(75, 23);
-            btnFiltro.TabIndex = 7;
-            btnFiltro.Text = "Aplicar";
-            btnFiltro.UseVisualStyleBackColor = true;
+            lblListarUsuarios.AutoSize = true;
+            lblListarUsuarios.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblListarUsuarios.Location = new Point(12, 20);
+            lblListarUsuarios.Name = "lblListarUsuarios";
+            lblListarUsuarios.Size = new Size(113, 32);
+            lblListarUsuarios.TabIndex = 8;
+            lblListarUsuarios.Text = "Usuarios";
             // 
             // formListarUsuarios
             // 
@@ -257,5 +269,6 @@
         private DataGridViewButtonColumn col_eliminar;
         private Button test;
         private Button btnFiltro;
+        private Label lblListarUsuarios;
     }
 }
