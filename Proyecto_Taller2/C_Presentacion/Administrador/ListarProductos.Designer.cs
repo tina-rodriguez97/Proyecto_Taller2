@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            test = new Button();
             btnBuscar = new Button();
             tbxBuscarNombre = new TextBox();
             lblBuscar = new Label();
@@ -43,13 +44,13 @@
             col_categoriaProducto = new DataGridViewTextBoxColumn();
             col_editarProducto = new DataGridViewTextBoxColumn();
             btnSalir = new Button();
-            test = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(247, 251, 255);
             panel1.Controls.Add(test);
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(tbxBuscarNombre);
@@ -61,6 +62,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(880, 94);
             panel1.TabIndex = 0;
+            // 
+            // test
+            // 
+            test.Location = new Point(714, 55);
+            test.Name = "test";
+            test.Size = new Size(75, 23);
+            test.TabIndex = 7;
+            test.Text = "test editar";
+            test.UseVisualStyleBackColor = true;
+            test.Click += test_Click;
             // 
             // btnBuscar
             // 
@@ -81,10 +92,10 @@
             // lblBuscar
             // 
             lblBuscar.AutoSize = true;
-            lblBuscar.Font = new Font("Segoe UI", 14F);
-            lblBuscar.Location = new Point(378, 22);
+            lblBuscar.Font = new Font("Franklin Gothic Medium", 14.25F);
+            lblBuscar.Location = new Point(385, 24);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(177, 25);
+            lblBuscar.Size = new Size(170, 24);
             lblBuscar.TabIndex = 2;
             lblBuscar.Text = "Buscar por nombre:";
             // 
@@ -99,10 +110,10 @@
             // lblFiltro
             // 
             lblFiltro.AutoSize = true;
-            lblFiltro.Font = new Font("Segoe UI", 14F);
-            lblFiltro.Location = new Point(36, 22);
+            lblFiltro.Font = new Font("Franklin Gothic Medium", 14.25F);
+            lblFiltro.Location = new Point(44, 25);
             lblFiltro.Name = "lblFiltro";
-            lblFiltro.Size = new Size(183, 25);
+            lblFiltro.Size = new Size(175, 24);
             lblFiltro.TabIndex = 0;
             lblFiltro.Text = "Filtrar por categoria:";
             // 
@@ -179,27 +190,18 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
-            // test
-            // 
-            test.Location = new Point(714, 55);
-            test.Name = "test";
-            test.Size = new Size(75, 23);
-            test.TabIndex = 7;
-            test.Text = "test editar";
-            test.UseVisualStyleBackColor = true;
-            test.Click += test_Click;
-            // 
             // ListarProductos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(880, 600);
             Controls.Add(btnSalir);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ListarProductos";
-            StartPosition = FormStartPosition.Manual;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListarProductos";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

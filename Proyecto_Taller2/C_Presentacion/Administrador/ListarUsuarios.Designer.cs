@@ -47,6 +47,7 @@
             comboBox1 = new ComboBox();
             lblFiltro = new Label();
             btnSalir = new Button();
+            btnFiltro = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -117,6 +118,8 @@
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(btnFiltro);
             panel1.Controls.Add(test);
             panel1.Controls.Add(btnBuscar);
             panel1.Controls.Add(textBox1);
@@ -142,7 +145,7 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(621, 52);
+            btnBuscar.Location = new Point(664, 24);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(75, 23);
             btnBuscar.TabIndex = 5;
@@ -151,7 +154,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(462, 52);
+            textBox1.Location = new Point(520, 54);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(138, 23);
             textBox1.TabIndex = 4;
@@ -159,17 +162,17 @@
             // lblBuscar
             // 
             lblBuscar.AutoSize = true;
-            lblBuscar.Font = new Font("Segoe UI", 14F);
-            lblBuscar.Location = new Point(350, 20);
+            lblBuscar.Font = new Font("Franklin Gothic Medium", 14.25F);
+            lblBuscar.Location = new Point(408, 22);
             lblBuscar.Name = "lblBuscar";
-            lblBuscar.Size = new Size(106, 25);
+            lblBuscar.Size = new Size(102, 24);
             lblBuscar.TabIndex = 3;
             lblBuscar.Text = "Buscar por:";
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(462, 21);
+            comboBox2.Location = new Point(520, 23);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(138, 23);
             comboBox2.TabIndex = 2;
@@ -185,10 +188,10 @@
             // lblFiltro
             // 
             lblFiltro.AutoSize = true;
-            lblFiltro.Font = new Font("Segoe UI", 14F);
+            lblFiltro.Font = new Font("Franklin Gothic Medium", 14.25F);
             lblFiltro.Location = new Point(12, 20);
             lblFiltro.Name = "lblFiltro";
-            lblFiltro.Size = new Size(99, 25);
+            lblFiltro.Size = new Size(94, 24);
             lblFiltro.TabIndex = 0;
             lblFiltro.Text = "Filtrar por:";
             // 
@@ -202,11 +205,21 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
+            // btnFiltro
+            // 
+            btnFiltro.Location = new Point(261, 23);
+            btnFiltro.Name = "btnFiltro";
+            btnFiltro.Size = new Size(75, 23);
+            btnFiltro.TabIndex = 7;
+            btnFiltro.Text = "Aplicar";
+            btnFiltro.UseVisualStyleBackColor = true;
+            // 
             // formListarUsuarios
             // 
             AccessibleRole = AccessibleRole.Border;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
             ClientSize = new Size(880, 600);
             Controls.Add(btnSalir);
             Controls.Add(panel1);
@@ -215,7 +228,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "formListarUsuarios";
-            StartPosition = FormStartPosition.Manual;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListarUsuarios";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
@@ -243,5 +256,6 @@
         private DataGridViewButtonColumn Editar;
         private DataGridViewButtonColumn col_eliminar;
         private Button test;
+        private Button btnFiltro;
     }
 }
