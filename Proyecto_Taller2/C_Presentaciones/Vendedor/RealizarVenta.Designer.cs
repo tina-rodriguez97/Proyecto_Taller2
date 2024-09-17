@@ -31,10 +31,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblNuevaVenta = new Label();
             cbxConsumidor = new ComboBox();
-            cbxProducto = new ComboBox();
             lblConsumidor = new Label();
             lblVendedor = new Label();
-            lblProducto = new Label();
             dtpFecha = new DateTimePicker();
             lblFechaVenta = new Label();
             gridVentaProducto = new DataGridView();
@@ -226,10 +224,8 @@
 
         private Label lblNuevaVenta;
         private ComboBox cbxConsumidor;
-        private ComboBox cbxProducto;
         private Label lblConsumidor;
         private Label lblVendedor;
-        private Label lblProducto;
         private DateTimePicker dtpFecha;
         private Label lblFechaVenta;
         private DataGridView gridVentaProducto;
