@@ -24,6 +24,7 @@ namespace Proyecto_Taller2.C_Presentacion.Supervisor
 
             Form form = new EstadisticasVentas();
             form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
             form.Show();
         }
 
@@ -33,6 +34,7 @@ namespace Proyecto_Taller2.C_Presentacion.Supervisor
 
             Form form = new ListarVentas();
             form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
             form.Show();
         }
 
@@ -43,6 +45,26 @@ namespace Proyecto_Taller2.C_Presentacion.Supervisor
                                MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes) this.Close();
+        }
+
+        private void btnAgregarusuario_Click(object sender, EventArgs e)
+        {
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
+
+            Form form = new AgregarUsuario();
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void btnListarUsuarios_Click(object sender, EventArgs e)
+        {
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
+
+            Form form = new ListarUsuarios();
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
     }
 }

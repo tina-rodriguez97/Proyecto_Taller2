@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             panel1 = new Panel();
+            button2 = new Button();
             lblListarVentas = new Label();
             button1 = new Button();
             textBox1 = new TextBox();
@@ -47,7 +48,6 @@
             col_precioTotal = new DataGridViewTextBoxColumn();
             col_verDetalle = new DataGridViewButtonColumn();
             btnSalir = new Button();
-            button2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -67,8 +67,18 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(864, 100);
+            panel1.Size = new Size(880, 100);
             panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(295, 56);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 25);
+            button2.TabIndex = 8;
+            button2.Text = "testDetalle";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // lblListarVentas
             // 
@@ -82,7 +92,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(726, 60);
+            button1.Location = new Point(793, 60);
             button1.Name = "button1";
             button1.Size = new Size(75, 25);
             button1.TabIndex = 6;
@@ -91,7 +101,7 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(563, 27);
+            textBox1.Location = new Point(630, 27);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(157, 23);
             textBox1.TabIndex = 5;
@@ -100,7 +110,7 @@
             // 
             lbl.AutoSize = true;
             lbl.Font = new Font("Franklin Gothic Medium", 12F);
-            lbl.Location = new Point(407, 27);
+            lbl.Location = new Point(474, 27);
             lbl.Name = "lbl";
             lbl.Size = new Size(150, 21);
             lbl.TabIndex = 4;
@@ -108,7 +118,7 @@
             // 
             // btnBuscar
             // 
-            btnBuscar.Location = new Point(726, 27);
+            btnBuscar.Location = new Point(793, 27);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(75, 25);
             btnBuscar.TabIndex = 3;
@@ -118,7 +128,7 @@
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(620, 58);
+            comboBox2.Location = new Point(687, 58);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(100, 23);
             comboBox2.TabIndex = 2;
@@ -126,7 +136,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(493, 58);
+            comboBox1.Location = new Point(560, 58);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 1;
@@ -135,7 +145,7 @@
             // 
             lblFiltro.AutoSize = true;
             lblFiltro.Font = new Font("Franklin Gothic Medium", 12F);
-            lblFiltro.Location = new Point(407, 57);
+            lblFiltro.Location = new Point(474, 57);
             lblFiltro.Name = "lblFiltro";
             lblFiltro.Size = new Size(80, 21);
             lblFiltro.TabIndex = 0;
@@ -153,15 +163,15 @@
             dataGridView1.Location = new Point(12, 115);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(840, 393);
+            dataGridView1.Size = new Size(856, 432);
             dataGridView1.TabIndex = 1;
             // 
             // col_fecha
@@ -208,7 +218,7 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(740, 514);
+            btnSalir.Location = new Point(756, 553);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(112, 35);
             btnSalir.TabIndex = 8;
@@ -216,22 +226,12 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
-            // button2
-            // 
-            button2.Location = new Point(295, 56);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 25);
-            button2.TabIndex = 8;
-            button2.Text = "testDetalle";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
             // ListarVentas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(864, 561);
+            ClientSize = new Size(880, 600);
             Controls.Add(btnSalir);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);

@@ -1,4 +1,4 @@
-﻿namespace Proyecto_Taller2.C_Presentacion.Administrador
+﻿namespace Proyecto_Taller2.C_Presentacion.Supervisor
 {
     partial class EditarUsuario
     {
@@ -80,7 +80,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(484, 561);
-            panel1.TabIndex = 1;
+            panel1.TabIndex = 2;
             // 
             // cbxUserActivo
             // 
@@ -156,7 +156,6 @@
             btnCancelar.TabIndex = 12;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
             // 
             // lblEditarUsuario
             // 
@@ -273,10 +272,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(484, 561);
             Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            MaximizeBox = false;
             Name = "EditarUsuario";
-            ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "EditarUsuario";
             panel1.ResumeLayout(false);

@@ -1,6 +1,6 @@
-﻿namespace Proyecto_Taller2.C_Presentacion.Administrador
+﻿namespace Proyecto_Taller2.C_Presentacion.Supervisor
 {
-    partial class formListarUsuarios
+    partial class ListarUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,16 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            panel1 = new Panel();
+            lblListarUsuarios = new Label();
+            btnFiltro = new Button();
+            test = new Button();
+            btnBuscar = new Button();
+            textBox1 = new TextBox();
+            lblBuscar = new Label();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
+            lblFiltro = new Label();
             dataGridView1 = new DataGridView();
             col_apellido = new DataGridViewTextBoxColumn();
             col_nombre = new DataGridViewTextBoxColumn();
@@ -38,84 +48,10 @@
             col_activo = new DataGridViewTextBoxColumn();
             Editar = new DataGridViewButtonColumn();
             col_eliminar = new DataGridViewButtonColumn();
-            panel1 = new Panel();
-            btnFiltro = new Button();
-            test = new Button();
-            btnBuscar = new Button();
-            textBox1 = new TextBox();
-            lblBuscar = new Label();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            lblFiltro = new Label();
             btnSalir = new Button();
-            lblListarUsuarios = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AccessibleRole = AccessibleRole.None;
-            dataGridView1.BackgroundColor = Color.FromArgb(255, 252, 247);
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersHeight = 40;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { col_apellido, col_nombre, col_dni, col_usuario, col_rol, col_activo, Editar, col_eliminar });
-            dataGridView1.GridColor = Color.FromArgb(224, 224, 224);
-            dataGridView1.Location = new Point(12, 115);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(840, 420);
-            dataGridView1.TabIndex = 0;
-            // 
-            // col_apellido
-            // 
-            col_apellido.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            col_apellido.HeaderText = "Apellido";
-            col_apellido.Name = "col_apellido";
-            // 
-            // col_nombre
-            // 
-            col_nombre.HeaderText = "Nombre";
-            col_nombre.Name = "col_nombre";
-            // 
-            // col_dni
-            // 
-            col_dni.HeaderText = "DNI";
-            col_dni.Name = "col_dni";
-            // 
-            // col_usuario
-            // 
-            col_usuario.HeaderText = "Nombre de usuario";
-            col_usuario.Name = "col_usuario";
-            // 
-            // col_rol
-            // 
-            col_rol.HeaderText = "Rol";
-            col_rol.Name = "col_rol";
-            // 
-            // col_activo
-            // 
-            col_activo.HeaderText = "Activo";
-            col_activo.Name = "col_activo";
-            // 
-            // Editar
-            // 
-            Editar.HeaderText = "Editar";
-            Editar.Name = "Editar";
-            // 
-            // col_eliminar
-            // 
-            col_eliminar.HeaderText = "Eliminar";
-            col_eliminar.Name = "col_eliminar";
             // 
             // panel1
             // 
@@ -132,8 +68,18 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(880, 89);
-            panel1.TabIndex = 1;
+            panel1.Size = new Size(880, 100);
+            panel1.TabIndex = 2;
+            // 
+            // lblListarUsuarios
+            // 
+            lblListarUsuarios.AutoSize = true;
+            lblListarUsuarios.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblListarUsuarios.Location = new Point(12, 18);
+            lblListarUsuarios.Name = "lblListarUsuarios";
+            lblListarUsuarios.Size = new Size(113, 32);
+            lblListarUsuarios.TabIndex = 8;
+            lblListarUsuarios.Text = "Usuarios";
             // 
             // btnFiltro
             // 
@@ -152,7 +98,6 @@
             test.TabIndex = 6;
             test.Text = "test editar";
             test.UseVisualStyleBackColor = true;
-            test.Click += test_Click;
             // 
             // btnBuscar
             // 
@@ -206,59 +151,111 @@
             lblFiltro.TabIndex = 0;
             lblFiltro.Text = "Filtrar por:";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.AccessibleRole = AccessibleRole.None;
+            dataGridView1.BackgroundColor = Color.FromArgb(255, 252, 247);
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersHeight = 40;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { col_apellido, col_nombre, col_dni, col_usuario, col_rol, col_activo, Editar, col_eliminar });
+            dataGridView1.GridColor = Color.FromArgb(224, 224, 224);
+            dataGridView1.Location = new Point(12, 114);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridView1.RowHeadersVisible = false;
+            dataGridView1.Size = new Size(856, 420);
+            dataGridView1.TabIndex = 3;
+            // 
+            // col_apellido
+            // 
+            col_apellido.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            col_apellido.HeaderText = "Apellido";
+            col_apellido.Name = "col_apellido";
+            // 
+            // col_nombre
+            // 
+            col_nombre.HeaderText = "Nombre";
+            col_nombre.Name = "col_nombre";
+            // 
+            // col_dni
+            // 
+            col_dni.HeaderText = "DNI";
+            col_dni.Name = "col_dni";
+            // 
+            // col_usuario
+            // 
+            col_usuario.HeaderText = "Nombre de usuario";
+            col_usuario.Name = "col_usuario";
+            // 
+            // col_rol
+            // 
+            col_rol.HeaderText = "Rol";
+            col_rol.Name = "col_rol";
+            // 
+            // col_activo
+            // 
+            col_activo.HeaderText = "Activo";
+            col_activo.Name = "col_activo";
+            // 
+            // Editar
+            // 
+            Editar.HeaderText = "Editar";
+            Editar.Name = "Editar";
+            // 
+            // col_eliminar
+            // 
+            col_eliminar.HeaderText = "Eliminar";
+            col_eliminar.Name = "col_eliminar";
+            // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(736, 541);
+            btnSalir.Location = new Point(752, 541);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(116, 47);
-            btnSalir.TabIndex = 2;
+            btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.Click += btnSalir_Click;
             // 
-            // lblListarUsuarios
+            // ListarUsuarios
             // 
-            lblListarUsuarios.AutoSize = true;
-            lblListarUsuarios.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lblListarUsuarios.Location = new Point(12, 20);
-            lblListarUsuarios.Name = "lblListarUsuarios";
-            lblListarUsuarios.Size = new Size(113, 32);
-            lblListarUsuarios.TabIndex = 8;
-            lblListarUsuarios.Text = "Usuarios";
-            // 
-            // formListarUsuarios
-            // 
-            AccessibleRole = AccessibleRole.Border;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(880, 600);
             Controls.Add(btnSalir);
-            Controls.Add(panel1);
             Controls.Add(dataGridView1);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            MdiChildrenMinimizedAnchorBottom = false;
-            MinimizeBox = false;
-            Name = "formListarUsuarios";
+            Name = "ListarUsuarios";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ListarUsuarios";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
         private Panel panel1;
-        private Button btnSalir;
-        private Label lblFiltro;
-        private ComboBox comboBox1;
+        private Label lblListarUsuarios;
+        private Button btnFiltro;
+        private Button test;
         private Button btnBuscar;
         private TextBox textBox1;
         private Label lblBuscar;
         private ComboBox comboBox2;
+        private ComboBox comboBox1;
+        private Label lblFiltro;
+        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn col_apellido;
         private DataGridViewTextBoxColumn col_nombre;
         private DataGridViewTextBoxColumn col_dni;
@@ -267,8 +264,6 @@
         private DataGridViewTextBoxColumn col_activo;
         private DataGridViewButtonColumn Editar;
         private DataGridViewButtonColumn col_eliminar;
-        private Button test;
-        private Button btnFiltro;
-        private Label lblListarUsuarios;
+        private Button btnSalir;
     }
 }

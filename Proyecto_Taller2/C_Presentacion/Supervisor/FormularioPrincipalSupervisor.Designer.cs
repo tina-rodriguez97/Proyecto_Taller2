@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             panelAside = new Panel();
-            btnBackup = new Button();
+            btnAgregarusuario = new Button();
+            btnListarUsuarios = new Button();
+            btnCerrarSesion = new Button();
             btnListarVentas = new Button();
             btnEstadistias = new Button();
             ptbLogo = new PictureBox();
             lblUsuario = new Label();
             lblMenuSupervisor = new Label();
-            btnCerrarSesion = new Button();
             panelAside.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
             SuspendLayout();
@@ -43,8 +44,9 @@
             // panelAside
             // 
             panelAside.BackColor = Color.White;
+            panelAside.Controls.Add(btnAgregarusuario);
+            panelAside.Controls.Add(btnListarUsuarios);
             panelAside.Controls.Add(btnCerrarSesion);
-            panelAside.Controls.Add(btnBackup);
             panelAside.Controls.Add(btnListarVentas);
             panelAside.Controls.Add(btnEstadistias);
             panelAside.Controls.Add(ptbLogo);
@@ -53,21 +55,43 @@
             panelAside.Dock = DockStyle.Left;
             panelAside.Location = new Point(0, 0);
             panelAside.Name = "panelAside";
-            panelAside.Size = new Size(300, 661);
+            panelAside.Size = new Size(300, 611);
             panelAside.TabIndex = 1;
             // 
-            // btnBackup
+            // btnAgregarusuario
             // 
-            btnBackup.Location = new Point(12, 439);
-            btnBackup.Name = "btnBackup";
-            btnBackup.Size = new Size(280, 43);
-            btnBackup.TabIndex = 13;
-            btnBackup.Text = "Backup / Restore";
-            btnBackup.UseVisualStyleBackColor = true;
+            btnAgregarusuario.Location = new Point(12, 295);
+            btnAgregarusuario.Name = "btnAgregarusuario";
+            btnAgregarusuario.Size = new Size(280, 43);
+            btnAgregarusuario.TabIndex = 16;
+            btnAgregarusuario.Text = "Agregar Usuario";
+            btnAgregarusuario.UseVisualStyleBackColor = true;
+            btnAgregarusuario.Click += btnAgregarusuario_Click;
+            // 
+            // btnListarUsuarios
+            // 
+            btnListarUsuarios.Location = new Point(12, 355);
+            btnListarUsuarios.Name = "btnListarUsuarios";
+            btnListarUsuarios.Size = new Size(280, 43);
+            btnListarUsuarios.TabIndex = 15;
+            btnListarUsuarios.Text = "Listar usuarios";
+            btnListarUsuarios.UseVisualStyleBackColor = true;
+            btnListarUsuarios.Click += btnListarUsuarios_Click;
+            // 
+            // btnCerrarSesion
+            // 
+            btnCerrarSesion.BackColor = Color.LightCoral;
+            btnCerrarSesion.Location = new Point(12, 534);
+            btnCerrarSesion.Name = "btnCerrarSesion";
+            btnCerrarSesion.Size = new Size(279, 32);
+            btnCerrarSesion.TabIndex = 14;
+            btnCerrarSesion.Text = "Cerrar sesion";
+            btnCerrarSesion.UseVisualStyleBackColor = false;
+            btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
             // btnListarVentas
             // 
-            btnListarVentas.Location = new Point(12, 374);
+            btnListarVentas.Location = new Point(12, 472);
             btnListarVentas.Name = "btnListarVentas";
             btnListarVentas.Size = new Size(280, 43);
             btnListarVentas.TabIndex = 12;
@@ -77,7 +101,7 @@
             // 
             // btnEstadistias
             // 
-            btnEstadistias.Location = new Point(12, 316);
+            btnEstadistias.Location = new Point(12, 414);
             btnEstadistias.Name = "btnEstadistias";
             btnEstadistias.Size = new Size(280, 43);
             btnEstadistias.TabIndex = 11;
@@ -115,22 +139,11 @@
             lblMenuSupervisor.TabIndex = 9;
             lblMenuSupervisor.Text = "Supervisor";
             // 
-            // btnCerrarSesion
-            // 
-            btnCerrarSesion.BackColor = Color.LightCoral;
-            btnCerrarSesion.Location = new Point(12, 602);
-            btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(279, 32);
-            btnCerrarSesion.TabIndex = 14;
-            btnCerrarSesion.Text = "Cerrar sesion";
-            btnCerrarSesion.UseVisualStyleBackColor = false;
-            btnCerrarSesion.Click += btnCerrarSesion_Click;
-            // 
             // FormularioPrincipalSupervisor
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1184, 661);
+            ClientSize = new Size(1184, 611);
             Controls.Add(panelAside);
             IsMdiContainer = true;
             MaximizeBox = false;
@@ -152,7 +165,8 @@
         private Label lblMenuSupervisor;
         private Button btnEstadistias;
         private Button btnListarVentas;
-        private Button btnBackup;
         private Button btnCerrarSesion;
+        private Button btnAgregarusuario;
+        private Button btnListarUsuarios;
     }
 }

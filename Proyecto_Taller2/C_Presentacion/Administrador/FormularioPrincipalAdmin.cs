@@ -21,11 +21,6 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
         {
 
             
-            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
-
-            Form form = new formAltaUsuarioAdmin();
-            form.MdiParent = this;
-            form.Show();
 
 
         }
@@ -36,15 +31,13 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
             Form form = new AgregarProducto();
             form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
             form.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
-            Form form = new formListarUsuarios();
-            form.MdiParent = this;
-            form.Show();
+         
         }
 
         private void Principal_Admin_Load(object sender, EventArgs e)
@@ -57,6 +50,7 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
             Form form = new ListarProductos();
             form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
             form.Show();
         }
 
