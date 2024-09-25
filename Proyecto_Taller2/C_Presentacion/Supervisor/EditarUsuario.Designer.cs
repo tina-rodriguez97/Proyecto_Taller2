@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            textBox1 = new TextBox();
+            lblDireccion = new Label();
             cbxUserActivo = new ComboBox();
             lblActivo = new Label();
             tbxTelefono = new TextBox();
@@ -49,13 +52,17 @@
             lblApellido = new Label();
             tbxNombre = new TextBox();
             lblNombre = new Label();
+            errorProvider = new ErrorProvider(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(lblDireccion);
             panel1.Controls.Add(cbxUserActivo);
             panel1.Controls.Add(lblActivo);
             panel1.Controls.Add(tbxTelefono);
@@ -81,6 +88,23 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(484, 561);
             panel1.TabIndex = 2;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(181, 267);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(211, 23);
+            textBox1.TabIndex = 22;
+            // 
+            // lblDireccion
+            // 
+            lblDireccion.AutoSize = true;
+            lblDireccion.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDireccion.Location = new Point(68, 267);
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new Size(91, 24);
+            lblDireccion.TabIndex = 21;
+            lblDireccion.Text = "Direccion:";
             // 
             // cbxUserActivo
             // 
@@ -156,6 +180,7 @@
             btnCancelar.TabIndex = 12;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // lblEditarUsuario
             // 
@@ -176,6 +201,7 @@
             btnConfirmar.Size = new Size(138, 45);
             btnConfirmar.TabIndex = 10;
             btnConfirmar.Text = "Confirmar";
+            btnConfirmar.Click += btnConfirmar_Click;
             // 
             // tbxDni
             // 
@@ -266,6 +292,11 @@
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre:";
             // 
+            // errorProvider
+            // 
+            errorProvider.BlinkRate = 300;
+            errorProvider.ContainerControl = this;
+            // 
             // EditarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -278,6 +309,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
         }
 
@@ -304,5 +336,8 @@
         private Label lblApellido;
         private TextBox tbxNombre;
         private Label lblNombre;
+        private TextBox textBox1;
+        private Label lblDireccion;
+        private ErrorProvider errorProvider;
     }
 }

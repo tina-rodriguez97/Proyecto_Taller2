@@ -16,5 +16,15 @@ namespace Proyecto_Taller2.C_Presentacion.Supervisor
         {
             InitializeComponent();
         }
+
+        private void test_Click(object sender, EventArgs e)
+        {
+            new EditarUsuario().ShowDialog();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

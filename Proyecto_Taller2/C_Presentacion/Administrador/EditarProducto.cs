@@ -17,9 +17,17 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             InitializeComponent();
         }
 
+        private bool todosSonValidos()
+        {
+            Validador validador = new Validador();
+
+            return validador.validarCampo(errorProvider, tbxNombre, 5)
+                && validador.validarCampo(errorProvider, tbxDescripcion, 10);
+
+        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            if (todosSonValidos()) MessageBox.Show("Exito!"); 
         }
 
         private void btnCancelar_Click_1(object sender, EventArgs e)

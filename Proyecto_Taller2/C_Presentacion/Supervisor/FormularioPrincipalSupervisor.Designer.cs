@@ -32,8 +32,8 @@
             btnAgregarusuario = new Button();
             btnListarUsuarios = new Button();
             btnCerrarSesion = new Button();
-            btnListarVentas = new Button();
-            btnEstadistias = new Button();
+            btnBackupRestore = new Button();
+            btnEstadistiasVendedores = new Button();
             ptbLogo = new PictureBox();
             lblUsuario = new Label();
             lblMenuSupervisor = new Label();
@@ -47,8 +47,8 @@
             panelAside.Controls.Add(btnAgregarusuario);
             panelAside.Controls.Add(btnListarUsuarios);
             panelAside.Controls.Add(btnCerrarSesion);
-            panelAside.Controls.Add(btnListarVentas);
-            panelAside.Controls.Add(btnEstadistias);
+            panelAside.Controls.Add(btnBackupRestore);
+            panelAside.Controls.Add(btnEstadistiasVendedores);
             panelAside.Controls.Add(ptbLogo);
             panelAside.Controls.Add(lblUsuario);
             panelAside.Controls.Add(lblMenuSupervisor);
@@ -63,7 +63,7 @@
             btnAgregarusuario.Location = new Point(12, 295);
             btnAgregarusuario.Name = "btnAgregarusuario";
             btnAgregarusuario.Size = new Size(280, 43);
-            btnAgregarusuario.TabIndex = 16;
+            btnAgregarusuario.TabIndex = 1;
             btnAgregarusuario.Text = "Agregar Usuario";
             btnAgregarusuario.UseVisualStyleBackColor = true;
             btnAgregarusuario.Click += btnAgregarusuario_Click;
@@ -73,7 +73,7 @@
             btnListarUsuarios.Location = new Point(12, 355);
             btnListarUsuarios.Name = "btnListarUsuarios";
             btnListarUsuarios.Size = new Size(280, 43);
-            btnListarUsuarios.TabIndex = 15;
+            btnListarUsuarios.TabIndex = 2;
             btnListarUsuarios.Text = "Listar usuarios";
             btnListarUsuarios.UseVisualStyleBackColor = true;
             btnListarUsuarios.Click += btnListarUsuarios_Click;
@@ -84,30 +84,30 @@
             btnCerrarSesion.Location = new Point(12, 534);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Size = new Size(279, 32);
-            btnCerrarSesion.TabIndex = 14;
+            btnCerrarSesion.TabIndex = 5;
             btnCerrarSesion.Text = "Cerrar sesion";
             btnCerrarSesion.UseVisualStyleBackColor = false;
             btnCerrarSesion.Click += btnCerrarSesion_Click;
             // 
-            // btnListarVentas
+            // btnBackupRestore
             // 
-            btnListarVentas.Location = new Point(12, 472);
-            btnListarVentas.Name = "btnListarVentas";
-            btnListarVentas.Size = new Size(280, 43);
-            btnListarVentas.TabIndex = 12;
-            btnListarVentas.Text = "Listar ventas";
-            btnListarVentas.UseVisualStyleBackColor = true;
-            btnListarVentas.Click += btnListarVentas_Click;
+            btnBackupRestore.Location = new Point(12, 472);
+            btnBackupRestore.Name = "btnBackupRestore";
+            btnBackupRestore.Size = new Size(280, 43);
+            btnBackupRestore.TabIndex = 4;
+            btnBackupRestore.Text = "BD Backup";
+            btnBackupRestore.UseVisualStyleBackColor = true;
+            btnBackupRestore.Click += btnListarVentas_Click;
             // 
-            // btnEstadistias
+            // btnEstadistiasVendedores
             // 
-            btnEstadistias.Location = new Point(12, 414);
-            btnEstadistias.Name = "btnEstadistias";
-            btnEstadistias.Size = new Size(280, 43);
-            btnEstadistias.TabIndex = 11;
-            btnEstadistias.Text = "Estadisticas";
-            btnEstadistias.UseVisualStyleBackColor = true;
-            btnEstadistias.Click += btnEstadistias_Click;
+            btnEstadistiasVendedores.Location = new Point(12, 414);
+            btnEstadistiasVendedores.Name = "btnEstadistiasVendedores";
+            btnEstadistiasVendedores.Size = new Size(280, 43);
+            btnEstadistiasVendedores.TabIndex = 3;
+            btnEstadistiasVendedores.Text = "Estadisticas de vendedores";
+            btnEstadistiasVendedores.UseVisualStyleBackColor = true;
+            btnEstadistiasVendedores.Click += btnEstadistias_Click;
             // 
             // ptbLogo
             // 
@@ -163,8 +163,8 @@
         private PictureBox ptbLogo;
         private Label lblUsuario;
         private Label lblMenuSupervisor;
-        private Button btnEstadistias;
-        private Button btnListarVentas;
+        private Button btnEstadistiasVendedores;
+        private Button btnBackupRestore;
         private Button btnCerrarSesion;
         private Button btnAgregarusuario;
         private Button btnListarUsuarios;

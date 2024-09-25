@@ -1,4 +1,4 @@
-﻿namespace Proyecto_Taller2.C_Presentacion.Supervisor
+﻿namespace Proyecto_Taller2.C_Presentacion.Administrador
 {
     partial class EstadisticasVentas
     {
@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            lblVendedores = new Label();
-            panel2 = new Panel();
-            lblCategorias = new Label();
             panel3 = new Panel();
             label1 = new Label();
             lblGanancias = new Label();
@@ -43,48 +39,14 @@
             label3 = new Label();
             btnBuscar = new Button();
             comboBox1 = new ComboBox();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            panel2 = new Panel();
+            lblCategorias = new Label();
+            panel1 = new Panel();
+            lblVendedores = new Label();
             panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(247, 251, 255);
-            panel1.Controls.Add(lblVendedores);
-            panel1.Location = new Point(12, 173);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(419, 415);
-            panel1.TabIndex = 0;
-            // 
-            // lblVendedores
-            // 
-            lblVendedores.AutoSize = true;
-            lblVendedores.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            lblVendedores.Location = new Point(52, 15);
-            lblVendedores.Name = "lblVendedores";
-            lblVendedores.Size = new Size(279, 30);
-            lblVendedores.TabIndex = 0;
-            lblVendedores.Text = "Vendedor con mas ventas";
-            // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(247, 251, 255);
-            panel2.Controls.Add(lblCategorias);
-            panel2.Location = new Point(445, 173);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(423, 415);
-            panel2.TabIndex = 1;
-            // 
-            // lblCategorias
-            // 
-            lblCategorias.AutoSize = true;
-            lblCategorias.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            lblCategorias.Location = new Point(86, 15);
-            lblCategorias.Name = "lblCategorias";
-            lblCategorias.Size = new Size(251, 30);
-            lblCategorias.TabIndex = 1;
-            lblCategorias.Text = "Categoria mas vendida";
             // 
             // panel3
             // 
@@ -103,7 +65,7 @@
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(880, 167);
-            panel3.TabIndex = 2;
+            panel3.TabIndex = 3;
             // 
             // label1
             // 
@@ -195,44 +157,81 @@
             comboBox1.TabIndex = 5;
             comboBox1.Text = "Buscar vendedor...";
             // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(247, 251, 255);
+            panel2.Controls.Add(lblCategorias);
+            panel2.Location = new Point(445, 173);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(423, 415);
+            panel2.TabIndex = 5;
+            // 
+            // lblCategorias
+            // 
+            lblCategorias.AutoSize = true;
+            lblCategorias.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblCategorias.Location = new Point(86, 15);
+            lblCategorias.Name = "lblCategorias";
+            lblCategorias.Size = new Size(251, 30);
+            lblCategorias.TabIndex = 1;
+            lblCategorias.Text = "Categoria mas vendida";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(lblVendedores);
+            panel1.Location = new Point(12, 173);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(419, 415);
+            panel1.TabIndex = 4;
+            // 
+            // lblVendedores
+            // 
+            lblVendedores.AutoSize = true;
+            lblVendedores.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
+            lblVendedores.Location = new Point(52, 15);
+            lblVendedores.Name = "lblVendedores";
+            lblVendedores.Size = new Size(279, 30);
+            lblVendedores.TabIndex = 0;
+            lblVendedores.Text = "Vendedor con mas ventas";
+            // 
             // EstadisticasVentas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(880, 600);
-            Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "EstadisticasVentas";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "EstadisticasVentas";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private Label lblVendedores;
-        private Panel panel2;
-        private Label lblCategorias;
         private Panel panel3;
+        private Label label1;
+        private Label lblGanancias;
+        private Label label2;
         private Label lblEstadisticas;
         private Label lblVentasTotales;
-        private Label lblGanancias;
+        private Splitter splitter1;
         private Label lblVendedorGanancias;
         private Label label3;
         private Button btnBuscar;
         private ComboBox comboBox1;
-        private Label label2;
-        private Label label1;
-        private Splitter splitter1;
+        private Panel panel2;
+        private Label lblCategorias;
+        private Panel panel1;
+        private Label lblVendedores;
     }
 }

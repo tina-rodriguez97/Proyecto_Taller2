@@ -19,10 +19,12 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
         private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
 
-            
-
-
+            Form form = new ListarVentas();
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
 
         private void btnNuevoProducto_Click(object sender, EventArgs e)

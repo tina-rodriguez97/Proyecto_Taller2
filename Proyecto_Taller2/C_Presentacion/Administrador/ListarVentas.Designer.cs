@@ -1,4 +1,4 @@
-﻿namespace Proyecto_Taller2.C_Presentacion.Supervisor
+﻿namespace Proyecto_Taller2.C_Presentacion.Administrador
 {
     partial class ListarVentas
     {
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             button2 = new Button();
             lblListarVentas = new Label();
@@ -68,7 +68,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(880, 100);
-            panel1.TabIndex = 0;
+            panel1.TabIndex = 1;
             // 
             // button2
             // 
@@ -160,19 +160,19 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { col_fecha, col_nroVenta, col_vendedor, col_cliente, col_cantProuctos, col_precioTotal, col_verDetalle });
             dataGridView1.GridColor = Color.FromArgb(224, 224, 224);
-            dataGridView1.Location = new Point(12, 115);
+            dataGridView1.Location = new Point(12, 106);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(856, 432);
-            dataGridView1.TabIndex = 1;
+            dataGridView1.Size = new Size(856, 448);
+            dataGridView1.TabIndex = 2;
             // 
             // col_fecha
             // 
@@ -218,10 +218,10 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(756, 553);
+            btnSalir.Location = new Point(756, 560);
             btnSalir.Name = "btnSalir";
             btnSalir.Size = new Size(112, 35);
-            btnSalir.TabIndex = 8;
+            btnSalir.TabIndex = 9;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
@@ -236,9 +236,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            MaximizeBox = false;
             Name = "ListarVentas";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "ListarVentas";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -249,14 +247,16 @@
         #endregion
 
         private Panel panel1;
-        private DataGridView dataGridView1;
-        private Label lblFiltro;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private Button button2;
+        private Label lblListarVentas;
         private Button button1;
         private TextBox textBox1;
         private Label lbl;
         private Button btnBuscar;
+        private ComboBox comboBox2;
+        private ComboBox comboBox1;
+        private Label lblFiltro;
+        private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn col_fecha;
         private DataGridViewTextBoxColumn col_nroVenta;
         private DataGridViewTextBoxColumn col_vendedor;
@@ -264,8 +264,6 @@
         private DataGridViewTextBoxColumn col_cantProuctos;
         private DataGridViewTextBoxColumn col_precioTotal;
         private DataGridViewButtonColumn col_verDetalle;
-        private Label lblListarVentas;
         private Button btnSalir;
-        private Button button2;
     }
 }

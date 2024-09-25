@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_Taller2.C_Presentacion.Supervisor
+namespace Proyecto_Taller2.C_Presentacion.Administrador
 {
-    public partial class EstadisticasVentas : Form
+    public partial class nuevaMarca : Form
     {
-        public EstadisticasVentas()
+        public nuevaMarca()
         {
             InitializeComponent();
         }

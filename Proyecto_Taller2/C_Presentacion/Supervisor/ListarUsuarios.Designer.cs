@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             panel1 = new Panel();
             lblListarUsuarios = new Label();
             btnFiltro = new Button();
@@ -98,6 +98,7 @@
             test.TabIndex = 6;
             test.Text = "test editar";
             test.UseVisualStyleBackColor = true;
+            test.Click += test_Click;
             // 
             // btnBuscar
             // 
@@ -163,15 +164,15 @@
             dataGridView1.Location = new Point(12, 114);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(856, 420);
+            dataGridView1.Size = new Size(856, 441);
             dataGridView1.TabIndex = 3;
             // 
             // col_apellido
@@ -217,12 +218,13 @@
             // 
             // btnSalir
             // 
-            btnSalir.Location = new Point(752, 541);
+            btnSalir.Location = new Point(752, 561);
             btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(116, 47);
+            btnSalir.Size = new Size(116, 37);
             btnSalir.TabIndex = 4;
             btnSalir.Text = "Salir";
             btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += btnSalir_Click;
             // 
             // ListarUsuarios
             // 

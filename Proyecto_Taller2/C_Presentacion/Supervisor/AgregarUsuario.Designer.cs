@@ -49,6 +49,8 @@
             tbxNombre = new TextBox();
             lblNombre = new Label();
             errorProvider = new ErrorProvider(components);
+            lblDireccion = new Label();
+            textBox1 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
@@ -58,6 +60,8 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(lblDireccion);
             panel1.Controls.Add(tbxTelefono);
             panel1.Controls.Add(lblTelefono);
             panel1.Controls.Add(pictureBox1);
@@ -255,6 +259,23 @@
             errorProvider.BlinkRate = 300;
             errorProvider.ContainerControl = this;
             // 
+            // lblDireccion
+            // 
+            lblDireccion.AutoSize = true;
+            lblDireccion.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDireccion.Location = new Point(68, 265);
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new Size(91, 24);
+            lblDireccion.TabIndex = 19;
+            lblDireccion.Text = "Direccion:";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(181, 265);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(211, 23);
+            textBox1.TabIndex = 20;
+            // 
             // AgregarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -295,5 +316,7 @@
         private TextBox tbxNombre;
         private Label lblNombre;
         private ErrorProvider errorProvider;
+        private TextBox textBox1;
+        private Label lblDireccion;
     }
 }

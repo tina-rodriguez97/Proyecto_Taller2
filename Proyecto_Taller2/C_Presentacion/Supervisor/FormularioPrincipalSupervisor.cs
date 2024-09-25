@@ -32,7 +32,7 @@ namespace Proyecto_Taller2.C_Presentacion.Supervisor
         {
             if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
 
-            Form form = new ListarVentas();
+            Form form = new BackupRestore();
             form.MdiParent = this;
             form.Dock = DockStyle.Fill;
             form.Show();

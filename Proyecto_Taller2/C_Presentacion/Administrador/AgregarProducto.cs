@@ -19,7 +19,11 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            var result = MessageBox.Show("Seguro que desea cancelar esta operacion?", "Cancelar alta de usuario",
+                              MessageBoxButtons.YesNo,
+                              MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes) this.Close();
         }
 
         private void cbxTalleM_CheckedChanged(object sender, EventArgs e)
@@ -37,7 +41,7 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             if (cbxTalleXL.Checked) tbxTalleXL.Enabled = true; else tbxTalleXL.Enabled = false;
         }
 
-        private bool todosSonVaolidos()
+        private bool todosSonValidos()
         {
             Validador validador = new Validador();
 
@@ -48,8 +52,13 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
         private void btnAgregar_Click(object sender, EventArgs e)
         {
 
-            if (todosSonVaolidos()) return;
-  
+            if (todosSonValidos()) return;
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new nuevaMarca().ShowDialog();
         }
     }
 }

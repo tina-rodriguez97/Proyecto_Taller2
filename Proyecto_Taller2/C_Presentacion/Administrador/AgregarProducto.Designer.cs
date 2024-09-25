@@ -39,7 +39,11 @@
             tbxDescripcion = new TextBox();
             btnCancelar = new Button();
             panel1 = new Panel();
-            comboBox1 = new ComboBox();
+            btnNuevaCategoria = new Button();
+            button1 = new Button();
+            cbxMarca = new ComboBox();
+            lblMarca = new Label();
+            cbxCategoria = new ComboBox();
             tbxTalleXL = new TextBox();
             tbxTalleL = new TextBox();
             tbxTalleM = new TextBox();
@@ -67,7 +71,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Franklin Gothic Medium", 14.25F);
-            label1.Location = new Point(34, 103);
+            label1.Location = new Point(34, 134);
             label1.Name = "label1";
             label1.Size = new Size(80, 24);
             label1.TabIndex = 1;
@@ -77,7 +81,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Franklin Gothic Medium", 14.25F);
-            label2.Location = new Point(34, 249);
+            label2.Location = new Point(34, 311);
             label2.Name = "label2";
             label2.Size = new Size(93, 24);
             label2.TabIndex = 2;
@@ -87,7 +91,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Franklin Gothic Medium", 14.25F);
-            label3.Location = new Point(32, 306);
+            label3.Location = new Point(33, 359);
             label3.Name = "label3";
             label3.Size = new Size(115, 24);
             label3.TabIndex = 3;
@@ -97,7 +101,7 @@
             // 
             lblDescripcion.AutoSize = true;
             lblDescripcion.Font = new Font("Franklin Gothic Medium", 14.25F);
-            lblDescripcion.Location = new Point(34, 152);
+            lblDescripcion.Location = new Point(34, 176);
             lblDescripcion.Name = "lblDescripcion";
             lblDescripcion.Size = new Size(110, 24);
             lblDescripcion.TabIndex = 4;
@@ -115,14 +119,14 @@
             // 
             // tbxNombre
             // 
-            tbxNombre.Location = new Point(165, 106);
+            tbxNombre.Location = new Point(165, 137);
             tbxNombre.Name = "tbxNombre";
             tbxNombre.Size = new Size(242, 23);
             tbxNombre.TabIndex = 6;
             // 
             // tbxDescripcion
             // 
-            tbxDescripcion.Location = new Point(165, 152);
+            tbxDescripcion.Location = new Point(165, 176);
             tbxDescripcion.Multiline = true;
             tbxDescripcion.Name = "tbxDescripcion";
             tbxDescripcion.Size = new Size(242, 76);
@@ -141,7 +145,11 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(btnNuevaCategoria);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(cbxMarca);
+            panel1.Controls.Add(lblMarca);
+            panel1.Controls.Add(cbxCategoria);
             panel1.Controls.Add(tbxTalleXL);
             panel1.Controls.Add(tbxTalleL);
             panel1.Controls.Add(tbxTalleM);
@@ -164,18 +172,54 @@
             panel1.Size = new Size(500, 600);
             panel1.TabIndex = 11;
             // 
-            // comboBox1
+            // btnNuevaCategoria
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(165, 249);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(242, 23);
-            comboBox1.TabIndex = 19;
+            btnNuevaCategoria.Location = new Point(296, 308);
+            btnNuevaCategoria.Name = "btnNuevaCategoria";
+            btnNuevaCategoria.Size = new Size(108, 26);
+            btnNuevaCategoria.TabIndex = 23;
+            btnNuevaCategoria.Text = "Nueva Categoria";
+            btnNuevaCategoria.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(296, 272);
+            button1.Name = "button1";
+            button1.Size = new Size(108, 25);
+            button1.TabIndex = 22;
+            button1.Text = "Nueva marca";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // cbxMarca
+            // 
+            cbxMarca.FormattingEnabled = true;
+            cbxMarca.Location = new Point(165, 273);
+            cbxMarca.Name = "cbxMarca";
+            cbxMarca.Size = new Size(125, 23);
+            cbxMarca.TabIndex = 21;
+            // 
+            // lblMarca
+            // 
+            lblMarca.Font = new Font("Franklin Gothic Medium", 14.25F);
+            lblMarca.Location = new Point(34, 273);
+            lblMarca.Name = "lblMarca";
+            lblMarca.Size = new Size(93, 24);
+            lblMarca.TabIndex = 20;
+            lblMarca.Text = "Marca:";
+            // 
+            // cbxCategoria
+            // 
+            cbxCategoria.FormattingEnabled = true;
+            cbxCategoria.Location = new Point(165, 311);
+            cbxCategoria.Name = "cbxCategoria";
+            cbxCategoria.Size = new Size(125, 23);
+            cbxCategoria.TabIndex = 19;
             // 
             // tbxTalleXL
             // 
             tbxTalleXL.Enabled = false;
-            tbxTalleXL.Location = new Point(206, 393);
+            tbxTalleXL.Location = new Point(207, 446);
             tbxTalleXL.Name = "tbxTalleXL";
             tbxTalleXL.Size = new Size(45, 23);
             tbxTalleXL.TabIndex = 18;
@@ -183,7 +227,7 @@
             // tbxTalleL
             // 
             tbxTalleL.Enabled = false;
-            tbxTalleL.Location = new Point(206, 364);
+            tbxTalleL.Location = new Point(207, 417);
             tbxTalleL.Name = "tbxTalleL";
             tbxTalleL.Size = new Size(45, 23);
             tbxTalleL.TabIndex = 17;
@@ -191,14 +235,14 @@
             // tbxTalleM
             // 
             tbxTalleM.Enabled = false;
-            tbxTalleM.Location = new Point(206, 335);
+            tbxTalleM.Location = new Point(207, 388);
             tbxTalleM.Name = "tbxTalleM";
             tbxTalleM.Size = new Size(45, 23);
             tbxTalleM.TabIndex = 16;
             // 
             // tbxTalleS
             // 
-            tbxTalleS.Location = new Point(206, 306);
+            tbxTalleS.Location = new Point(207, 359);
             tbxTalleS.Name = "tbxTalleS";
             tbxTalleS.Size = new Size(45, 23);
             tbxTalleS.TabIndex = 15;
@@ -207,7 +251,7 @@
             // 
             cbxTalleXL.AutoSize = true;
             cbxTalleXL.Font = new Font("Segoe UI", 11F);
-            cbxTalleXL.Location = new Point(164, 393);
+            cbxTalleXL.Location = new Point(165, 446);
             cbxTalleXL.Name = "cbxTalleXL";
             cbxTalleXL.Size = new Size(44, 24);
             cbxTalleXL.TabIndex = 14;
@@ -219,7 +263,7 @@
             // 
             cbxTalleL.AutoSize = true;
             cbxTalleL.Font = new Font("Segoe UI", 11F);
-            cbxTalleL.Location = new Point(164, 364);
+            cbxTalleL.Location = new Point(165, 417);
             cbxTalleL.Name = "cbxTalleL";
             cbxTalleL.Size = new Size(35, 24);
             cbxTalleL.TabIndex = 13;
@@ -231,7 +275,7 @@
             // 
             cbxTalleM.AutoSize = true;
             cbxTalleM.Font = new Font("Segoe UI", 11F);
-            cbxTalleM.Location = new Point(164, 335);
+            cbxTalleM.Location = new Point(165, 388);
             cbxTalleM.Name = "cbxTalleM";
             cbxTalleM.Size = new Size(41, 24);
             cbxTalleM.TabIndex = 12;
@@ -245,7 +289,7 @@
             cbxTalleS.Checked = true;
             cbxTalleS.CheckState = CheckState.Checked;
             cbxTalleS.Font = new Font("Segoe UI", 11F);
-            cbxTalleS.Location = new Point(164, 306);
+            cbxTalleS.Location = new Point(165, 359);
             cbxTalleS.Name = "cbxTalleS";
             cbxTalleS.Size = new Size(36, 24);
             cbxTalleS.TabIndex = 11;
@@ -290,11 +334,15 @@
         private CheckBox cbxTalleM;
         private CheckBox cbxTalleS;
         private CheckBox cbxTalleXL;
-        private ComboBox comboBox1;
+        private ComboBox cbxCategoria;
         private TextBox tbxTalleXL;
         private TextBox tbxTalleL;
         private TextBox tbxTalleM;
         private TextBox tbxTalleS;
         private ErrorProvider errorProvider;
+        private Button button1;
+        private ComboBox cbxMarca;
+        private Label lblMarca;
+        private Button btnNuevaCategoria;
     }
 }
