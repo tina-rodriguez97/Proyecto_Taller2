@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Proyecto_Taller2.C_Presentaciones.Vendedor;
+using Proyecto_Taller2.C_Presentaciones.Login;
 
 namespace Proyecto_Taller2.C_Presentaciones
 {
@@ -22,6 +23,7 @@ namespace Proyecto_Taller2.C_Presentaciones
 
         private void btnListaProductos_Click(object sender, EventArgs e)
         {
+            ListaProductos productosForm = new ListaProductos();
             CargarFormularioEnPanel(new ListaProductos(), panelMuestra);
         }
 
@@ -38,6 +40,41 @@ namespace Proyecto_Taller2.C_Presentaciones
             // Agregar el formulario al panel destino y mostrarlo
             panelDestino.Controls.Add(formulario);
             formulario.Show();
+        }
+
+        private void btnRealizarVenta_Click(object sender, EventArgs e)
+        {
+            RealizarVenta productosForm = new RealizarVenta();
+            CargarFormularioEnPanel(new RealizarVenta(), panelMuestra);
+        }
+
+        private void btnVentasRealizadas_Click(object sender, EventArgs e)
+        {
+            ListaVentasRealizadas productosForm = new ListaVentasRealizadas();
+            CargarFormularioEnPanel(new ListaVentasRealizadas(), panelMuestra);
+        }
+
+        private void btnAltaCliente_Click(object sender, EventArgs e)
+        {
+            AltaCliente productosForm = new AltaCliente();
+            CargarFormularioEnPanel(new AltaCliente(), panelMuestra);
+        }
+
+        private void panelMuestra_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnCerrarSseion_Click(object sender, EventArgs e)
+        {
+            // Crear una instancia del formulario Login
+            Login loginForm = new Login();
+
+            // Mostrar el formulario de Login
+            loginForm.Show();
+
+            // Cerrar el formulario actual (el que contiene el botón)
+            this.Close();
         }
     }
 }
