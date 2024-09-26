@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             panelMenuVendedor = new Panel();
-            lblNombreVendedorM = new Label();
-            pictureBox1 = new PictureBox();
+            lblUsuario = new Label();
+            lblMenuVendedor = new Label();
+            ptbLogo = new PictureBox();
             btnCerrarSseion = new Button();
             btnAltaCliente = new Button();
             btnVentasRealizadas = new Button();
@@ -38,48 +39,64 @@
             btnListaProductos = new Button();
             panelMuestra = new Panel();
             panelMenuVendedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
             SuspendLayout();
             // 
             // panelMenuVendedor
             // 
-            panelMenuVendedor.Controls.Add(lblNombreVendedorM);
-            panelMenuVendedor.Controls.Add(pictureBox1);
+            panelMenuVendedor.BackColor = Color.White;
+            panelMenuVendedor.Controls.Add(lblUsuario);
+            panelMenuVendedor.Controls.Add(lblMenuVendedor);
+            panelMenuVendedor.Controls.Add(ptbLogo);
             panelMenuVendedor.Controls.Add(btnCerrarSseion);
             panelMenuVendedor.Controls.Add(btnAltaCliente);
             panelMenuVendedor.Controls.Add(btnVentasRealizadas);
             panelMenuVendedor.Controls.Add(btnRealizarVenta);
             panelMenuVendedor.Controls.Add(btnListaProductos);
-            panelMenuVendedor.Location = new Point(1, 1);
+            panelMenuVendedor.Dock = DockStyle.Left;
+            panelMenuVendedor.Location = new Point(0, 0);
             panelMenuVendedor.Name = "panelMenuVendedor";
-            panelMenuVendedor.Size = new Size(214, 609);
+            panelMenuVendedor.Size = new Size(300, 611);
             panelMenuVendedor.TabIndex = 4;
             // 
-            // lblNombreVendedorM
+            // lblUsuario
             // 
-            lblNombreVendedorM.AutoSize = true;
-            lblNombreVendedorM.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombreVendedorM.Location = new Point(40, 170);
-            lblNombreVendedorM.Name = "lblNombreVendedorM";
-            lblNombreVendedorM.Size = new Size(139, 21);
-            lblNombreVendedorM.TabIndex = 0;
-            lblNombreVendedorM.Text = "Nombre Vendedor";
+            lblUsuario.AutoSize = true;
+            lblUsuario.Font = new Font("Segoe UI", 10F);
+            lblUsuario.Location = new Point(66, 245);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(164, 19);
+            lblUsuario.TabIndex = 13;
+            lblUsuario.Text = "Conectado como: (Name)";
             // 
-            // pictureBox1
+            // lblMenuVendedor
             // 
-            pictureBox1.Location = new Point(50, 25);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(114, 112);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            lblMenuVendedor.AutoSize = true;
+            lblMenuVendedor.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMenuVendedor.Location = new Point(81, 213);
+            lblMenuVendedor.Name = "lblMenuVendedor";
+            lblMenuVendedor.Size = new Size(124, 32);
+            lblMenuVendedor.TabIndex = 14;
+            lblMenuVendedor.Text = "Vendedor";
+            // 
+            // ptbLogo
+            // 
+            ptbLogo.Image = Properties.Resources.logo;
+            ptbLogo.InitialImage = Properties.Resources.logo;
+            ptbLogo.Location = new Point(60, 12);
+            ptbLogo.Name = "ptbLogo";
+            ptbLogo.Size = new Size(180, 180);
+            ptbLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptbLogo.TabIndex = 12;
+            ptbLogo.TabStop = false;
             // 
             // btnCerrarSseion
             // 
             btnCerrarSseion.BackColor = Color.Salmon;
             btnCerrarSseion.FlatStyle = FlatStyle.Popup;
-            btnCerrarSseion.Location = new Point(72, 566);
+            btnCerrarSseion.Location = new Point(12, 554);
             btnCerrarSseion.Name = "btnCerrarSseion";
-            btnCerrarSseion.Size = new Size(75, 23);
+            btnCerrarSseion.Size = new Size(271, 23);
             btnCerrarSseion.TabIndex = 11;
             btnCerrarSseion.Text = "Cerrar Sesión";
             btnCerrarSseion.UseVisualStyleBackColor = false;
@@ -87,9 +104,9 @@
             // 
             // btnAltaCliente
             // 
-            btnAltaCliente.Location = new Point(32, 466);
+            btnAltaCliente.Location = new Point(12, 472);
             btnAltaCliente.Name = "btnAltaCliente";
-            btnAltaCliente.Size = new Size(155, 23);
+            btnAltaCliente.Size = new Size(271, 42);
             btnAltaCliente.TabIndex = 3;
             btnAltaCliente.Text = "Alta Cliente";
             btnAltaCliente.UseVisualStyleBackColor = true;
@@ -97,9 +114,9 @@
             // 
             // btnVentasRealizadas
             // 
-            btnVentasRealizadas.Location = new Point(32, 402);
+            btnVentasRealizadas.Location = new Point(12, 412);
             btnVentasRealizadas.Name = "btnVentasRealizadas";
-            btnVentasRealizadas.Size = new Size(155, 23);
+            btnVentasRealizadas.Size = new Size(271, 42);
             btnVentasRealizadas.TabIndex = 2;
             btnVentasRealizadas.Text = "Ver ventas realizadas";
             btnVentasRealizadas.UseVisualStyleBackColor = true;
@@ -107,9 +124,9 @@
             // 
             // btnRealizarVenta
             // 
-            btnRealizarVenta.Location = new Point(32, 336);
+            btnRealizarVenta.Location = new Point(12, 352);
             btnRealizarVenta.Name = "btnRealizarVenta";
-            btnRealizarVenta.Size = new Size(155, 23);
+            btnRealizarVenta.Size = new Size(271, 42);
             btnRealizarVenta.TabIndex = 1;
             btnRealizarVenta.Text = "Realizar una venta";
             btnRealizarVenta.UseVisualStyleBackColor = true;
@@ -117,9 +134,9 @@
             // 
             // btnListaProductos
             // 
-            btnListaProductos.Location = new Point(32, 264);
+            btnListaProductos.Location = new Point(12, 290);
             btnListaProductos.Name = "btnListaProductos";
-            btnListaProductos.Size = new Size(155, 23);
+            btnListaProductos.Size = new Size(271, 42);
             btnListaProductos.TabIndex = 0;
             btnListaProductos.Text = "Listar Productos";
             btnListaProductos.UseVisualStyleBackColor = true;
@@ -127,9 +144,10 @@
             // 
             // panelMuestra
             // 
-            panelMuestra.Location = new Point(213, 1);
+            panelMuestra.Dock = DockStyle.Fill;
+            panelMuestra.Location = new Point(300, 0);
             panelMuestra.Name = "panelMuestra";
-            panelMuestra.Size = new Size(971, 609);
+            panelMuestra.Size = new Size(884, 611);
             panelMuestra.TabIndex = 6;
             panelMuestra.Paint += panelMuestra_Paint;
             // 
@@ -140,13 +158,15 @@
             ClientSize = new Size(1184, 611);
             Controls.Add(panelMuestra);
             Controls.Add(panelMenuVendedor);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             IsMdiContainer = true;
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
             Name = "MenuVendedor";
-            Text = "MenuVendedor";
+            Text = "Clothing Store: Vendedor";
             panelMenuVendedor.ResumeLayout(false);
             panelMenuVendedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptbLogo).EndInit();
             ResumeLayout(false);
         }
 
@@ -159,8 +179,9 @@
         private Panel panelMuestra;
         private Button btnAltaCliente;
         private Button btnCerrarSseion;
-        private Label lblNombreVendedorM;
-        private PictureBox pictureBox1;
+        private PictureBox ptbLogo;
+        private Label lblUsuario;
+        private Label lblMenuVendedor;
     }
 }
 

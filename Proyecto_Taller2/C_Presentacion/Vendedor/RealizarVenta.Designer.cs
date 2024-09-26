@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             lblNuevaVenta = new Label();
             cbxConsumidor = new ComboBox();
             lblConsumidor = new Label();
@@ -42,6 +42,7 @@
             Imagen = new DataGridViewImageColumn();
             Cantidad = new DataGridViewCheckBoxColumn();
             Subtotal = new DataGridViewCheckBoxColumn();
+            Eliminar = new DataGridViewButtonColumn();
             btnCobrar = new Button();
             btnCancelarVenta = new Button();
             dataGridView1 = new DataGridView();
@@ -49,7 +50,6 @@
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             dataGridViewImageColumn1 = new DataGridViewImageColumn();
             stock = new DataGridViewCheckBoxColumn();
-            Eliminar = new DataGridViewButtonColumn();
             lblSelecPro = new Label();
             lblDetalleVenta = new Label();
             cbxBuscarProVenta = new ComboBox();
@@ -73,7 +73,7 @@
             cbxConsumidor.FlatStyle = FlatStyle.Flat;
             cbxConsumidor.Font = new Font("Bookman Old Style", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbxConsumidor.FormattingEnabled = true;
-            cbxConsumidor.Location = new Point(531, 73);
+            cbxConsumidor.Location = new Point(630, 81);
             cbxConsumidor.Name = "cbxConsumidor";
             cbxConsumidor.Size = new Size(219, 28);
             cbxConsumidor.TabIndex = 1;
@@ -82,7 +82,7 @@
             // 
             lblConsumidor.AutoSize = true;
             lblConsumidor.Font = new Font("Bookman Old Style", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblConsumidor.Location = new Point(366, 77);
+            lblConsumidor.Location = new Point(465, 85);
             lblConsumidor.Name = "lblConsumidor";
             lblConsumidor.Size = new Size(159, 19);
             lblConsumidor.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             lblVendedor.AutoSize = true;
             lblVendedor.Font = new Font("Bookman Old Style", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblVendedor.Location = new Point(607, 18);
+            lblVendedor.Location = new Point(652, 18);
             lblVendedor.Name = "lblVendedor";
             lblVendedor.Size = new Size(143, 19);
             lblVendedor.TabIndex = 4;
@@ -124,19 +124,19 @@
             gridVentaProducto.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             gridVentaProducto.BackgroundColor = Color.Lavender;
             gridVentaProducto.BorderStyle = BorderStyle.Fixed3D;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = SystemColors.Control;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            gridVentaProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            gridVentaProducto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             gridVentaProducto.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridVentaProducto.Columns.AddRange(new DataGridViewColumn[] { NombreProducto, Precio, Imagen, Cantidad, Subtotal, Eliminar });
             gridVentaProducto.Location = new Point(25, 382);
             gridVentaProducto.Name = "gridVentaProducto";
-            gridVentaProducto.Size = new Size(722, 150);
+            gridVentaProducto.Size = new Size(824, 150);
             gridVentaProducto.TabIndex = 8;
             gridVentaProducto.CellContentClick += gridVentaProducto_CellContentClick;
             // 
@@ -165,11 +165,16 @@
             Subtotal.HeaderText = "Subtotal";
             Subtotal.Name = "Subtotal";
             // 
+            // Eliminar
+            // 
+            Eliminar.HeaderText = "Eliminar";
+            Eliminar.Name = "Eliminar";
+            // 
             // btnCobrar
             // 
             btnCobrar.BackColor = Color.SpringGreen;
             btnCobrar.FlatStyle = FlatStyle.Popup;
-            btnCobrar.Location = new Point(269, 550);
+            btnCobrar.Location = new Point(373, 550);
             btnCobrar.Name = "btnCobrar";
             btnCobrar.Size = new Size(75, 23);
             btnCobrar.TabIndex = 9;
@@ -180,7 +185,7 @@
             // 
             btnCancelarVenta.BackColor = Color.Salmon;
             btnCancelarVenta.FlatStyle = FlatStyle.Popup;
-            btnCancelarVenta.Location = new Point(403, 550);
+            btnCancelarVenta.Location = new Point(465, 550);
             btnCancelarVenta.Name = "btnCancelarVenta";
             btnCancelarVenta.Size = new Size(75, 23);
             btnCancelarVenta.TabIndex = 10;
@@ -194,19 +199,19 @@
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.BackgroundColor = Color.Lavender;
             dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewImageColumn1, stock });
             dataGridView1.Location = new Point(25, 179);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(722, 150);
+            dataGridView1.Size = new Size(824, 150);
             dataGridView1.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn1
@@ -229,16 +234,11 @@
             stock.HeaderText = "Stock";
             stock.Name = "stock";
             // 
-            // Eliminar
-            // 
-            Eliminar.HeaderText = "Eliminar";
-            Eliminar.Name = "Eliminar";
-            // 
             // lblSelecPro
             // 
             lblSelecPro.AutoSize = true;
             lblSelecPro.Font = new Font("Bookman Old Style", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSelecPro.Location = new Point(25, 148);
+            lblSelecPro.Location = new Point(25, 136);
             lblSelecPro.Name = "lblSelecPro";
             lblSelecPro.Size = new Size(171, 19);
             lblSelecPro.TabIndex = 12;
@@ -259,7 +259,7 @@
             cbxBuscarProVenta.FlatStyle = FlatStyle.Flat;
             cbxBuscarProVenta.Font = new Font("Bookman Old Style", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cbxBuscarProVenta.FormattingEnabled = true;
-            cbxBuscarProVenta.Location = new Point(447, 136);
+            cbxBuscarProVenta.Location = new Point(546, 136);
             cbxBuscarProVenta.Name = "cbxBuscarProVenta";
             cbxBuscarProVenta.Size = new Size(303, 28);
             cbxBuscarProVenta.TabIndex = 14;
@@ -268,7 +268,7 @@
             // 
             btnBuscarProVenta.BackColor = Color.AliceBlue;
             btnBuscarProVenta.FlatStyle = FlatStyle.Popup;
-            btnBuscarProVenta.Location = new Point(366, 139);
+            btnBuscarProVenta.Location = new Point(465, 139);
             btnBuscarProVenta.Name = "btnBuscarProVenta";
             btnBuscarProVenta.Size = new Size(75, 23);
             btnBuscarProVenta.TabIndex = 15;
@@ -280,7 +280,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
-            ClientSize = new Size(772, 585);
+            ClientSize = new Size(880, 600);
             Controls.Add(btnBuscarProVenta);
             Controls.Add(cbxBuscarProVenta);
             Controls.Add(lblDetalleVenta);
@@ -295,6 +295,7 @@
             Controls.Add(lblConsumidor);
             Controls.Add(cbxConsumidor);
             Controls.Add(lblNuevaVenta);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "RealizarVenta";
             Text = "Realizar una Vneta";
             ((System.ComponentModel.ISupportInitialize)gridVentaProducto).EndInit();
