@@ -68,10 +68,10 @@ namespace Proyecto_Taller2.C_Presentaciones
         private void btnCerrarSseion_Click(object sender, EventArgs e)
         {
             // Crear una instancia del formulario Login
-            Login loginForm = new Login();
+            //Login loginForm = new Login();
 
             // Mostrar el formulario de Login
-            loginForm.Show();
+           // loginForm.Show();
 
             // Cerrar el formulario actual (el que contiene el botón)
             this.Close();
