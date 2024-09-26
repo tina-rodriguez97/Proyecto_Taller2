@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnInformeVentas = new Button();
+            btnGestionProveedores = new Button();
+            btnGestionarClientes = new Button();
             ptbLogo = new PictureBox();
             btnCerrarSesion = new Button();
             lblUsuario = new Label();
-            btnListarProductos = new Button();
+            btnGestionarProductos = new Button();
             lblMenuAdmin = new Label();
-            btnNuevoProducto = new Button();
             btnEstadisticas = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbLogo).BeginInit();
@@ -43,18 +45,50 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnInformeVentas);
+            panel1.Controls.Add(btnGestionProveedores);
+            panel1.Controls.Add(btnGestionarClientes);
             panel1.Controls.Add(ptbLogo);
             panel1.Controls.Add(btnCerrarSesion);
             panel1.Controls.Add(lblUsuario);
-            panel1.Controls.Add(btnListarProductos);
+            panel1.Controls.Add(btnGestionarProductos);
             panel1.Controls.Add(lblMenuAdmin);
-            panel1.Controls.Add(btnNuevoProducto);
             panel1.Controls.Add(btnEstadisticas);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(300, 611);
             panel1.TabIndex = 1;
+            // 
+            // btnInformeVentas
+            // 
+            btnInformeVentas.Location = new Point(12, 481);
+            btnInformeVentas.Name = "btnInformeVentas";
+            btnInformeVentas.Size = new Size(279, 52);
+            btnInformeVentas.TabIndex = 10;
+            btnInformeVentas.Text = "Informes Venta";
+            btnInformeVentas.UseVisualStyleBackColor = true;
+            btnInformeVentas.Click += btnInformeVentas_Click;
+            // 
+            // btnGestionProveedores
+            // 
+            btnGestionProveedores.Location = new Point(12, 424);
+            btnGestionProveedores.Name = "btnGestionProveedores";
+            btnGestionProveedores.Size = new Size(279, 51);
+            btnGestionProveedores.TabIndex = 9;
+            btnGestionProveedores.Text = "Gestionar Proveedores";
+            btnGestionProveedores.UseVisualStyleBackColor = true;
+            btnGestionProveedores.Click += btnGestionProveedores_Click;
+            // 
+            // btnGestionarClientes
+            // 
+            btnGestionarClientes.Location = new Point(12, 369);
+            btnGestionarClientes.Name = "btnGestionarClientes";
+            btnGestionarClientes.Size = new Size(279, 49);
+            btnGestionarClientes.TabIndex = 8;
+            btnGestionarClientes.Text = "Gestionar Clientes";
+            btnGestionarClientes.UseVisualStyleBackColor = true;
+            btnGestionarClientes.Click += btnGestionarClientes_Click;
             // 
             // ptbLogo
             // 
@@ -88,15 +122,15 @@
             lblUsuario.Text = "Conectado como: (Name)";
             lblUsuario.Click += lblUsuario_Click;
             // 
-            // btnListarProductos
+            // btnGestionarProductos
             // 
-            btnListarProductos.Location = new Point(12, 422);
-            btnListarProductos.Name = "btnListarProductos";
-            btnListarProductos.Size = new Size(279, 49);
-            btnListarProductos.TabIndex = 3;
-            btnListarProductos.Text = "Listar Productos";
-            btnListarProductos.UseVisualStyleBackColor = true;
-            btnListarProductos.Click += btnListarProductos_Click;
+            btnGestionarProductos.Location = new Point(11, 314);
+            btnGestionarProductos.Name = "btnGestionarProductos";
+            btnGestionarProductos.Size = new Size(279, 49);
+            btnGestionarProductos.TabIndex = 3;
+            btnGestionarProductos.Text = "Gestionar Productios";
+            btnGestionarProductos.UseVisualStyleBackColor = true;
+            btnGestionarProductos.Click += btnListarProductos_Click;
             // 
             // lblMenuAdmin
             // 
@@ -108,23 +142,13 @@
             lblMenuAdmin.TabIndex = 2;
             lblMenuAdmin.Text = "Administrador";
             // 
-            // btnNuevoProducto
-            // 
-            btnNuevoProducto.Location = new Point(11, 351);
-            btnNuevoProducto.Name = "btnNuevoProducto";
-            btnNuevoProducto.Size = new Size(279, 49);
-            btnNuevoProducto.TabIndex = 2;
-            btnNuevoProducto.Text = "Nuevo Producto";
-            btnNuevoProducto.UseVisualStyleBackColor = true;
-            btnNuevoProducto.Click += btnNuevoProducto_Click;
-            // 
             // btnEstadisticas
             // 
-            btnEstadisticas.Location = new Point(11, 283);
+            btnEstadisticas.Location = new Point(10, 261);
             btnEstadisticas.Name = "btnEstadisticas";
             btnEstadisticas.Size = new Size(280, 47);
             btnEstadisticas.TabIndex = 1;
-            btnEstadisticas.Text = "Estadisticas de ventas";
+            btnEstadisticas.Text = "Listar todas las ventas";
             btnEstadisticas.UseVisualStyleBackColor = true;
             btnEstadisticas.Click += btnNuevoUsuario_Click;
             // 
@@ -141,7 +165,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             Name = "Principal_Admin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormularioPrincipalAdmin";
+            Text = "Clothing Store: Administrador";
             Load += Principal_Admin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -153,12 +177,13 @@
 
         private Panel panel1;
         private Button btnEstadisticas;
-        private Button btnNuevoProducto;
         private Label lblMenuAdmin;
-        private Button btnListarProductos;
+        private Button btnGestionarProductos;
         private Label lblUsuario;
-        private Label debug;
         private Button btnCerrarSesion;
         private PictureBox ptbLogo;
+        private Button btnGestionarClientes;
+        private Button btnGestionProveedores;
+        private Button btnInformeVentas;
     }
 }

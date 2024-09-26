@@ -46,7 +46,9 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
             Validador validador = new Validador();
 
             return validador.validarCampo(errorProvider, tbxNombre, 5)
-                && validador.validarCampo(errorProvider, tbxDescripcion, 10);
+                && validador.validarCampo(errorProvider, tbxDescripcion, 10)
+                && validador.validarCampo(errorProvider,tbxStockMnimo,1)
+                && validador.validarTalles(errorProvider, tbxTalleS, tbxTalleM, tbxTalleL, tbxTalleXL);
 
         }
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -59,6 +61,31 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
         private void button1_Click(object sender, EventArgs e)
         {
             new nuevaMarca().ShowDialog();
+        }
+
+        private void tbxTalleS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+        }
+
+        private void tbxTalleM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+        }
+
+        private void tbxTalleL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+        }
+
+        private void tbxTalleXL_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
+        }
+
+        private void tbxStockMnimo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar);
         }
     }
 }

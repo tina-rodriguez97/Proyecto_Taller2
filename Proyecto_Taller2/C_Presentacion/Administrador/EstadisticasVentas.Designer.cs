@@ -28,6 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel3 = new Panel();
             label1 = new Label();
             lblGanancias = new Label();
@@ -43,9 +49,13 @@
             lblCategorias = new Label();
             panel1 = new Panel();
             lblVendedores = new Label();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
             SuspendLayout();
             // 
             // panel3
@@ -160,6 +170,7 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(247, 251, 255);
+            panel2.Controls.Add(chart2);
             panel2.Controls.Add(lblCategorias);
             panel2.Location = new Point(445, 173);
             panel2.Name = "panel2";
@@ -179,6 +190,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(chart1);
             panel1.Controls.Add(lblVendedores);
             panel1.Location = new Point(12, 173);
             panel1.Name = "panel1";
@@ -194,6 +206,39 @@
             lblVendedores.Size = new Size(279, 30);
             lblVendedores.TabIndex = 0;
             lblVendedores.Text = "Vendedor con mas ventas";
+            // 
+            // chart1
+            // 
+            chartArea2.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chart1.Legends.Add(legend2);
+            chart1.Location = new Point(0, 62);
+            chart1.Name = "chart1";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chart1.Series.Add(series2);
+            chart1.Size = new Size(416, 353);
+            chart1.TabIndex = 1;
+            chart1.Text = "chart1";
+            // 
+            // chart2
+            // 
+            chartArea1.Name = "ChartArea1";
+            chart2.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart2.Legends.Add(legend1);
+            chart2.Location = new Point(3, 62);
+            chart2.Name = "chart2";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart2.Series.Add(series1);
+            chart2.Size = new Size(416, 353);
+            chart2.TabIndex = 2;
+            chart2.Text = "chart2";
             // 
             // EstadisticasVentas
             // 
@@ -213,6 +258,8 @@
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart2).EndInit();
             ResumeLayout(false);
         }
 
@@ -233,5 +280,7 @@
         private Label lblCategorias;
         private Panel panel1;
         private Label lblVendedores;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

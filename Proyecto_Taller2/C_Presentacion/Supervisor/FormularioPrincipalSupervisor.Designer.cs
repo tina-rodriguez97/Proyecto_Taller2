@@ -33,7 +33,6 @@
             btnListarUsuarios = new Button();
             btnCerrarSesion = new Button();
             btnBackupRestore = new Button();
-            btnEstadistiasVendedores = new Button();
             ptbLogo = new PictureBox();
             lblUsuario = new Label();
             lblMenuSupervisor = new Label();
@@ -48,7 +47,6 @@
             panelAside.Controls.Add(btnListarUsuarios);
             panelAside.Controls.Add(btnCerrarSesion);
             panelAside.Controls.Add(btnBackupRestore);
-            panelAside.Controls.Add(btnEstadistiasVendedores);
             panelAside.Controls.Add(ptbLogo);
             panelAside.Controls.Add(lblUsuario);
             panelAside.Controls.Add(lblMenuSupervisor);
@@ -91,23 +89,13 @@
             // 
             // btnBackupRestore
             // 
-            btnBackupRestore.Location = new Point(12, 472);
+            btnBackupRestore.Location = new Point(11, 422);
             btnBackupRestore.Name = "btnBackupRestore";
             btnBackupRestore.Size = new Size(280, 43);
             btnBackupRestore.TabIndex = 4;
             btnBackupRestore.Text = "BD Backup";
             btnBackupRestore.UseVisualStyleBackColor = true;
             btnBackupRestore.Click += btnListarVentas_Click;
-            // 
-            // btnEstadistiasVendedores
-            // 
-            btnEstadistiasVendedores.Location = new Point(12, 414);
-            btnEstadistiasVendedores.Name = "btnEstadistiasVendedores";
-            btnEstadistiasVendedores.Size = new Size(280, 43);
-            btnEstadistiasVendedores.TabIndex = 3;
-            btnEstadistiasVendedores.Text = "Estadisticas de vendedores";
-            btnEstadistiasVendedores.UseVisualStyleBackColor = true;
-            btnEstadistiasVendedores.Click += btnEstadistias_Click;
             // 
             // ptbLogo
             // 
@@ -163,7 +151,6 @@
         private PictureBox ptbLogo;
         private Label lblUsuario;
         private Label lblMenuSupervisor;
-        private Button btnEstadistiasVendedores;
         private Button btnBackupRestore;
         private Button btnCerrarSesion;
         private Button btnAgregarusuario;

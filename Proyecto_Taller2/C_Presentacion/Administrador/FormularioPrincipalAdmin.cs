@@ -39,7 +39,7 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private void Principal_Admin_Load(object sender, EventArgs e)
@@ -69,6 +69,33 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
                                 MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes) this.Close();
+        }
+
+        private void btnGestionarClientes_Click(object sender, EventArgs e)
+        {
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
+            Form form = new GestionarClientes();
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void btnGestionProveedores_Click(object sender, EventArgs e)
+        {
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
+            Form form = new GestionProveedores();
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+        }
+
+        private void btnInformeVentas_Click(object sender, EventArgs e)
+        {
+            if (this.Contains(this.ActiveMdiChild)) ActiveMdiChild?.Close();
+            Form form = new EstadisticasVentas();
+            form.MdiParent = this;
+            form.Dock = DockStyle.Fill;
+            form.Show();
         }
     }
 }

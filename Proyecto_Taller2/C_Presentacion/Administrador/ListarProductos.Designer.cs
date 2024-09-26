@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            comboBox2 = new ComboBox();
+            lblFiltrarMarca = new Label();
             btnFiltro = new Button();
             lblListarProductos = new Label();
             test = new Button();
@@ -47,8 +49,7 @@
             col_editarProducto = new DataGridViewButtonColumn();
             col_eliminar = new DataGridViewButtonColumn();
             btnSalir = new Button();
-            lblFiltrarMarca = new Label();
-            comboBox2 = new ComboBox();
+            btnNuevoProducto = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -56,6 +57,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(btnNuevoProducto);
             panel1.Controls.Add(comboBox2);
             panel1.Controls.Add(lblFiltrarMarca);
             panel1.Controls.Add(btnFiltro);
@@ -72,6 +74,24 @@
             panel1.Size = new Size(880, 94);
             panel1.TabIndex = 0;
             // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(337, 58);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(147, 23);
+            comboBox2.TabIndex = 12;
+            // 
+            // lblFiltrarMarca
+            // 
+            lblFiltrarMarca.AutoSize = true;
+            lblFiltrarMarca.Font = new Font("Franklin Gothic Medium", 12F);
+            lblFiltrarMarca.Location = new Point(204, 59);
+            lblFiltrarMarca.Name = "lblFiltrarMarca";
+            lblFiltrarMarca.Size = new Size(127, 21);
+            lblFiltrarMarca.TabIndex = 11;
+            lblFiltrarMarca.Text = "Filtrar por Marca:";
+            // 
             // btnFiltro
             // 
             btnFiltro.Location = new Point(793, 58);
@@ -85,7 +105,7 @@
             // 
             lblListarProductos.AutoSize = true;
             lblListarProductos.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lblListarProductos.Location = new Point(12, 25);
+            lblListarProductos.Location = new Point(12, 14);
             lblListarProductos.Name = "lblListarProductos";
             lblListarProductos.Size = new Size(131, 32);
             lblListarProductos.TabIndex = 9;
@@ -93,7 +113,7 @@
             // 
             // test
             // 
-            test.Location = new Point(28, 60);
+            test.Location = new Point(215, 25);
             test.Name = "test";
             test.Size = new Size(75, 23);
             test.TabIndex = 7;
@@ -229,23 +249,15 @@
             btnSalir.UseVisualStyleBackColor = true;
             btnSalir.Click += btnSalir_Click;
             // 
-            // lblFiltrarMarca
+            // btnNuevoProducto
             // 
-            lblFiltrarMarca.AutoSize = true;
-            lblFiltrarMarca.Font = new Font("Franklin Gothic Medium", 12F);
-            lblFiltrarMarca.Location = new Point(204, 59);
-            lblFiltrarMarca.Name = "lblFiltrarMarca";
-            lblFiltrarMarca.Size = new Size(127, 21);
-            lblFiltrarMarca.TabIndex = 11;
-            lblFiltrarMarca.Text = "Filtrar por Marca:";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(337, 58);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(147, 23);
-            comboBox2.TabIndex = 12;
+            btnNuevoProducto.Location = new Point(12, 60);
+            btnNuevoProducto.Name = "btnNuevoProducto";
+            btnNuevoProducto.Size = new Size(120, 23);
+            btnNuevoProducto.TabIndex = 13;
+            btnNuevoProducto.Text = "Nuevo Producto";
+            btnNuevoProducto.UseVisualStyleBackColor = true;
+            btnNuevoProducto.Click += btnNuevoProducto_Click;
             // 
             // ListarProductos
             // 
@@ -289,5 +301,6 @@
         private DataGridViewButtonColumn col_eliminar;
         private ComboBox comboBox2;
         private Label lblFiltrarMarca;
+        private Button btnNuevoProducto;
     }
 }

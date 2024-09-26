@@ -26,5 +26,10 @@ namespace Proyecto_Taller2.C_Presentacion.Administrador
         {
             new EditarProducto().ShowDialog();
         }
+
+        private void btnNuevoProducto_Click(object sender, EventArgs e)
+        {
+            new AgregarProducto().ShowDialog();
+        }
     }
 }

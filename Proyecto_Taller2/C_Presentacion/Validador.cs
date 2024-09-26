@@ -29,5 +29,32 @@ namespace Proyecto_Taller2.C_Presentacion
 
             return true;
         }
+
+        public bool validarTalles(ErrorProvider ep, TextBox tbxS,TextBox tbxM, TextBox tbxL, TextBox tbxXL)
+        {
+            ep.Clear();
+
+            if( String.IsNullOrEmpty(tbxS.Text) &&  
+                String.IsNullOrEmpty(tbxM.Text) &&
+                String.IsNullOrEmpty(tbxL.Text) &&
+                String.IsNullOrEmpty(tbxXL.Text)){
+                ep.SetError(tbxS, "Todos los campos de stock deben tener numeros");
+            }
+
+            int talleS = Int32.Parse(tbxS.Text);
+            int talleM = Int32.Parse(tbxM.Text);
+            int talleL = Int32.Parse(tbxL.Text);
+            int talleXL = Int32.Parse(tbxXL.Text);
+
+            int stock = talleS +  talleM + talleL + talleXL;
+
+            if (stock == 0)
+            {
+                ep.SetError(tbxS,"El stock debe tener almenos un producto");
+                return false;
+            }
+
+            return true;
+        }
     }
 }
