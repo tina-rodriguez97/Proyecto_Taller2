@@ -30,6 +30,8 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            cbxMarca = new ComboBox();
+            lblMarca = new Label();
             comboBox1 = new ComboBox();
             tbxTalleXL = new TextBox();
             tbxTalleL = new TextBox();
@@ -48,9 +50,9 @@
             lblStock = new Label();
             lblDescripcion = new Label();
             btnAgregar = new Button();
-            cbxMarca = new ComboBox();
-            lblMarca = new Label();
             errorProvider = new ErrorProvider(components);
+            tbxStockMnimo = new TextBox();
+            lblStockMinimo = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
             SuspendLayout();
@@ -58,6 +60,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(tbxStockMnimo);
+            panel1.Controls.Add(lblStockMinimo);
             panel1.Controls.Add(cbxMarca);
             panel1.Controls.Add(lblMarca);
             panel1.Controls.Add(comboBox1);
@@ -84,6 +88,23 @@
             panel1.Size = new Size(484, 561);
             panel1.TabIndex = 12;
             // 
+            // cbxMarca
+            // 
+            cbxMarca.FormattingEnabled = true;
+            cbxMarca.Location = new Point(180, 282);
+            cbxMarca.Name = "cbxMarca";
+            cbxMarca.Size = new Size(241, 23);
+            cbxMarca.TabIndex = 29;
+            // 
+            // lblMarca
+            // 
+            lblMarca.Font = new Font("Franklin Gothic Medium", 14.25F);
+            lblMarca.Location = new Point(32, 282);
+            lblMarca.Name = "lblMarca";
+            lblMarca.Size = new Size(93, 24);
+            lblMarca.TabIndex = 28;
+            lblMarca.Text = "Marca:";
+            // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
@@ -95,7 +116,7 @@
             // tbxTalleXL
             // 
             tbxTalleXL.Enabled = false;
-            tbxTalleXL.Location = new Point(222, 425);
+            tbxTalleXL.Location = new Point(221, 417);
             tbxTalleXL.Name = "tbxTalleXL";
             tbxTalleXL.Size = new Size(45, 23);
             tbxTalleXL.TabIndex = 26;
@@ -103,7 +124,7 @@
             // tbxTalleL
             // 
             tbxTalleL.Enabled = false;
-            tbxTalleL.Location = new Point(222, 396);
+            tbxTalleL.Location = new Point(221, 388);
             tbxTalleL.Name = "tbxTalleL";
             tbxTalleL.Size = new Size(45, 23);
             tbxTalleL.TabIndex = 25;
@@ -111,14 +132,14 @@
             // tbxTalleM
             // 
             tbxTalleM.Enabled = false;
-            tbxTalleM.Location = new Point(222, 367);
+            tbxTalleM.Location = new Point(221, 359);
             tbxTalleM.Name = "tbxTalleM";
             tbxTalleM.Size = new Size(45, 23);
             tbxTalleM.TabIndex = 24;
             // 
             // tbxTalleS
             // 
-            tbxTalleS.Location = new Point(222, 338);
+            tbxTalleS.Location = new Point(221, 330);
             tbxTalleS.Name = "tbxTalleS";
             tbxTalleS.Size = new Size(45, 23);
             tbxTalleS.TabIndex = 23;
@@ -127,7 +148,7 @@
             // 
             cbxTalleXL.AutoSize = true;
             cbxTalleXL.Font = new Font("Segoe UI", 11F);
-            cbxTalleXL.Location = new Point(180, 425);
+            cbxTalleXL.Location = new Point(179, 417);
             cbxTalleXL.Name = "cbxTalleXL";
             cbxTalleXL.Size = new Size(44, 24);
             cbxTalleXL.TabIndex = 22;
@@ -138,7 +159,7 @@
             // 
             cbxTalleL.AutoSize = true;
             cbxTalleL.Font = new Font("Segoe UI", 11F);
-            cbxTalleL.Location = new Point(180, 396);
+            cbxTalleL.Location = new Point(179, 388);
             cbxTalleL.Name = "cbxTalleL";
             cbxTalleL.Size = new Size(35, 24);
             cbxTalleL.TabIndex = 21;
@@ -149,7 +170,7 @@
             // 
             cbxTalleM.AutoSize = true;
             cbxTalleM.Font = new Font("Segoe UI", 11F);
-            cbxTalleM.Location = new Point(180, 367);
+            cbxTalleM.Location = new Point(179, 359);
             cbxTalleM.Name = "cbxTalleM";
             cbxTalleM.Size = new Size(41, 24);
             cbxTalleM.TabIndex = 20;
@@ -162,7 +183,7 @@
             cbxTalleS.Checked = true;
             cbxTalleS.CheckState = CheckState.Checked;
             cbxTalleS.Font = new Font("Segoe UI", 11F);
-            cbxTalleS.Location = new Point(180, 338);
+            cbxTalleS.Location = new Point(179, 330);
             cbxTalleS.Name = "cbxTalleS";
             cbxTalleS.Size = new Size(36, 24);
             cbxTalleS.TabIndex = 19;
@@ -228,7 +249,7 @@
             // 
             lblStock.AutoSize = true;
             lblStock.Font = new Font("Franklin Gothic Medium", 14.25F);
-            lblStock.Location = new Point(36, 338);
+            lblStock.Location = new Point(35, 330);
             lblStock.Name = "lblStock";
             lblStock.Size = new Size(61, 24);
             lblStock.TabIndex = 3;
@@ -254,26 +275,26 @@
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
             // 
-            // cbxMarca
-            // 
-            cbxMarca.FormattingEnabled = true;
-            cbxMarca.Location = new Point(180, 282);
-            cbxMarca.Name = "cbxMarca";
-            cbxMarca.Size = new Size(241, 23);
-            cbxMarca.TabIndex = 29;
-            // 
-            // lblMarca
-            // 
-            lblMarca.Font = new Font("Franklin Gothic Medium", 14.25F);
-            lblMarca.Location = new Point(32, 282);
-            lblMarca.Name = "lblMarca";
-            lblMarca.Size = new Size(93, 24);
-            lblMarca.TabIndex = 28;
-            lblMarca.Text = "Marca:";
-            // 
             // errorProvider
             // 
             errorProvider.ContainerControl = this;
+            // 
+            // tbxStockMnimo
+            // 
+            tbxStockMnimo.Location = new Point(179, 455);
+            tbxStockMnimo.Name = "tbxStockMnimo";
+            tbxStockMnimo.Size = new Size(242, 23);
+            tbxStockMnimo.TabIndex = 29;
+            // 
+            // lblStockMinimo
+            // 
+            lblStockMinimo.AutoSize = true;
+            lblStockMinimo.Font = new Font("Franklin Gothic Medium", 14.25F);
+            lblStockMinimo.Location = new Point(32, 452);
+            lblStockMinimo.Name = "lblStockMinimo";
+            lblStockMinimo.Size = new Size(123, 24);
+            lblStockMinimo.TabIndex = 28;
+            lblStockMinimo.Text = "Stock Mnimo:";
             // 
             // EditarProducto
             // 
@@ -317,5 +338,7 @@
         private ComboBox cbxMarca;
         private Label lblMarca;
         private ErrorProvider errorProvider;
+        private TextBox tbxStockMnimo;
+        private Label lblStockMinimo;
     }
 }

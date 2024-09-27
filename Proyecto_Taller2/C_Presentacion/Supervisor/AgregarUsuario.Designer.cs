@@ -30,13 +30,15 @@
         {
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
+            lblAltaDeUsuario = new Label();
+            textBox1 = new TextBox();
+            lblDireccion = new Label();
             tbxTelefono = new TextBox();
             lblTelefono = new Label();
             pictureBox1 = new PictureBox();
             cbxRol = new ComboBox();
             lblRol = new Label();
             btnCancelar = new Button();
-            lblAltaDeUsuario = new Label();
             btnRegistrar = new Button();
             tbxDni = new TextBox();
             lblContrasena = new Label();
@@ -49,8 +51,6 @@
             tbxNombre = new TextBox();
             lblNombre = new Label();
             errorProvider = new ErrorProvider(components);
-            lblDireccion = new Label();
-            textBox1 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider).BeginInit();
@@ -60,6 +60,7 @@
             // 
             panel1.Anchor = AnchorStyles.None;
             panel1.BackColor = Color.FromArgb(247, 251, 255);
+            panel1.Controls.Add(lblAltaDeUsuario);
             panel1.Controls.Add(textBox1);
             panel1.Controls.Add(lblDireccion);
             panel1.Controls.Add(tbxTelefono);
@@ -68,7 +69,6 @@
             panel1.Controls.Add(cbxRol);
             panel1.Controls.Add(lblRol);
             panel1.Controls.Add(btnCancelar);
-            panel1.Controls.Add(lblAltaDeUsuario);
             panel1.Controls.Add(btnRegistrar);
             panel1.Controls.Add(tbxDni);
             panel1.Controls.Add(lblContrasena);
@@ -84,6 +84,33 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(500, 600);
             panel1.TabIndex = 1;
+            // 
+            // lblAltaDeUsuario
+            // 
+            lblAltaDeUsuario.AutoSize = true;
+            lblAltaDeUsuario.Font = new Font("Gadugi", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblAltaDeUsuario.Location = new Point(105, 42);
+            lblAltaDeUsuario.Name = "lblAltaDeUsuario";
+            lblAltaDeUsuario.Size = new Size(186, 28);
+            lblAltaDeUsuario.TabIndex = 11;
+            lblAltaDeUsuario.Text = "Alta de usuario";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(181, 265);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(211, 23);
+            textBox1.TabIndex = 20;
+            // 
+            // lblDireccion
+            // 
+            lblDireccion.AutoSize = true;
+            lblDireccion.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDireccion.Location = new Point(68, 265);
+            lblDireccion.Name = "lblDireccion";
+            lblDireccion.Size = new Size(91, 24);
+            lblDireccion.TabIndex = 19;
+            lblDireccion.Text = "Direccion:";
             // 
             // tbxTelefono
             // 
@@ -105,11 +132,10 @@
             // 
             // pictureBox1
             // 
-            //pictureBox1.Image = Properties.Resources.userplus;
-            pictureBox1.Location = new Point(15, 12);
+            pictureBox1.Image = Properties.Resources.agregar_usuario;
+            pictureBox1.Location = new Point(19, 24);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(80, 80);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             // 
@@ -142,16 +168,6 @@
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
-            // 
-            // lblAltaDeUsuario
-            // 
-            lblAltaDeUsuario.AutoSize = true;
-            lblAltaDeUsuario.Font = new Font("Gadugi", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblAltaDeUsuario.Location = new Point(101, 40);
-            lblAltaDeUsuario.Name = "lblAltaDeUsuario";
-            lblAltaDeUsuario.Size = new Size(186, 28);
-            lblAltaDeUsuario.TabIndex = 11;
-            lblAltaDeUsuario.Text = "Alta de usuario";
             // 
             // btnRegistrar
             // 
@@ -258,23 +274,6 @@
             // 
             errorProvider.BlinkRate = 300;
             errorProvider.ContainerControl = this;
-            // 
-            // lblDireccion
-            // 
-            lblDireccion.AutoSize = true;
-            lblDireccion.Font = new Font("Franklin Gothic Medium", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDireccion.Location = new Point(68, 265);
-            lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(91, 24);
-            lblDireccion.TabIndex = 19;
-            lblDireccion.Text = "Direccion:";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(181, 265);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(211, 23);
-            textBox1.TabIndex = 20;
             // 
             // AgregarUsuario
             // 

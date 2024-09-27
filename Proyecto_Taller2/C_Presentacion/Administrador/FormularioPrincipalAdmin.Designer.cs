@@ -62,9 +62,12 @@
             // 
             // btnInformeVentas
             // 
-            btnInformeVentas.Location = new Point(12, 481);
+            btnInformeVentas.Image = Properties.Resources.histograma_de_grafico;
+            btnInformeVentas.ImageAlign = ContentAlignment.MiddleLeft;
+            btnInformeVentas.Location = new Point(24, 481);
             btnInformeVentas.Name = "btnInformeVentas";
-            btnInformeVentas.Size = new Size(279, 52);
+            btnInformeVentas.Padding = new Padding(5, 0, 0, 0);
+            btnInformeVentas.Size = new Size(232, 52);
             btnInformeVentas.TabIndex = 10;
             btnInformeVentas.Text = "Informes Venta";
             btnInformeVentas.UseVisualStyleBackColor = true;
@@ -72,9 +75,12 @@
             // 
             // btnGestionProveedores
             // 
-            btnGestionProveedores.Location = new Point(12, 424);
+            btnGestionProveedores.Image = Properties.Resources.proveedor__1_;
+            btnGestionProveedores.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGestionProveedores.Location = new Point(24, 424);
             btnGestionProveedores.Name = "btnGestionProveedores";
-            btnGestionProveedores.Size = new Size(279, 51);
+            btnGestionProveedores.Padding = new Padding(5, 0, 0, 0);
+            btnGestionProveedores.Size = new Size(232, 51);
             btnGestionProveedores.TabIndex = 9;
             btnGestionProveedores.Text = "Gestionar Proveedores";
             btnGestionProveedores.UseVisualStyleBackColor = true;
@@ -82,9 +88,12 @@
             // 
             // btnGestionarClientes
             // 
-            btnGestionarClientes.Location = new Point(12, 369);
+            btnGestionarClientes.Image = Properties.Resources.usuarios;
+            btnGestionarClientes.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGestionarClientes.Location = new Point(24, 369);
             btnGestionarClientes.Name = "btnGestionarClientes";
-            btnGestionarClientes.Size = new Size(279, 49);
+            btnGestionarClientes.Padding = new Padding(5, 0, 0, 0);
+            btnGestionarClientes.Size = new Size(232, 49);
             btnGestionarClientes.TabIndex = 8;
             btnGestionarClientes.Text = "Gestionar Clientes";
             btnGestionarClientes.UseVisualStyleBackColor = true;
@@ -104,9 +113,11 @@
             // btnCerrarSesion
             // 
             btnCerrarSesion.BackColor = Color.LightCoral;
-            btnCerrarSesion.Location = new Point(11, 567);
+            btnCerrarSesion.Image = Properties.Resources.salida;
+            btnCerrarSesion.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCerrarSesion.Location = new Point(11, 561);
             btnCerrarSesion.Name = "btnCerrarSesion";
-            btnCerrarSesion.Size = new Size(279, 32);
+            btnCerrarSesion.Size = new Size(279, 38);
             btnCerrarSesion.TabIndex = 4;
             btnCerrarSesion.Text = "Cerrar sesion";
             btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -125,11 +136,14 @@
             // 
             // btnGestionarProductos
             // 
-            btnGestionarProductos.Location = new Point(11, 314);
+            btnGestionarProductos.Image = Properties.Resources.caja_abierta;
+            btnGestionarProductos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGestionarProductos.Location = new Point(24, 314);
             btnGestionarProductos.Name = "btnGestionarProductos";
-            btnGestionarProductos.Size = new Size(279, 49);
+            btnGestionarProductos.Padding = new Padding(5, 0, 0, 0);
+            btnGestionarProductos.Size = new Size(232, 49);
             btnGestionarProductos.TabIndex = 3;
-            btnGestionarProductos.Text = "Gestionar Productios";
+            btnGestionarProductos.Text = "Gestionar Productos";
             btnGestionarProductos.UseVisualStyleBackColor = true;
             btnGestionarProductos.Click += btnListarProductos_Click;
             // 
@@ -145,9 +159,12 @@
             // 
             // btnEstadisticas
             // 
-            btnEstadisticas.Location = new Point(10, 261);
+            btnEstadisticas.Image = Properties.Resources.comprobacion_de_lista;
+            btnEstadisticas.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEstadisticas.Location = new Point(24, 261);
             btnEstadisticas.Name = "btnEstadisticas";
-            btnEstadisticas.Size = new Size(280, 47);
+            btnEstadisticas.Padding = new Padding(5, 0, 0, 0);
+            btnEstadisticas.Size = new Size(232, 47);
             btnEstadisticas.TabIndex = 1;
             btnEstadisticas.Text = "Listar todas las ventas";
             btnEstadisticas.UseVisualStyleBackColor = true;
